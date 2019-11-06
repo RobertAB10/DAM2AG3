@@ -58,6 +58,12 @@
     <Compile Include="NuevaPregunta.Designer.cs">
       <DependentUpon>NuevaPregunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaInicial.Designer.cs">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Modificar Pregunta.resx">
