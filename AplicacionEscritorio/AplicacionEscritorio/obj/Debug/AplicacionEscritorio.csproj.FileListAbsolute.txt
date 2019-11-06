@@ -61,3 +61,6 @@ C:\Users\rober\Source\Repos\mNactec4\AplicacionEscritorio\AplicacionEscritorio\o
 C:\Users\rober\OneDrive\Escritorio\mNactec-master\mNactec-master\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
 C:\Users\rober\OneDrive\Escritorio\mNactec-master\mNactec-master\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
 C:\Users\rober\OneDrive\Escritorio\mNactec-master\mNactec-master\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
+C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
+C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
+C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
