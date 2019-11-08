@@ -21,5 +21,29 @@ namespace AplicacionEscritorio
         {
 
         }
+
+        private void Modificar_Pregunta_Load(object sender, EventArgs e)
+        {
+            comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+            comboBoxNivel.Items.AddRange(Constants.Nivells);
+        }
+
+        private void comboBoxNivel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            String Idioma = comboBoxIdiomes.SelectedText; 
+            switch (Idioma)
+            {
+                case "Català":
+                    pictureBoxIdioma.Image = Image.FromFile("./Resources/catala.png");
+                    break;
+            }
+        }
     }
 }

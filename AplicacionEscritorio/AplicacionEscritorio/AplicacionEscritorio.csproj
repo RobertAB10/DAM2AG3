@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Modificar Pregunta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +99,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\castella.png" />
+    <Content Include="Resources\catala.png" />
+    <Content Include="Resources\english.png" />
     <Content Include="Resources\Fondopantalla.png" />
     <None Include="Resources\luna.png" />
     <None Include="Resources\Universo.jpg" />
