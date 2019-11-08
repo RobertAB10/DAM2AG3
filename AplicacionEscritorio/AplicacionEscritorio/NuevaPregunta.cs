@@ -39,6 +39,14 @@ namespace AplicacionEscritorio
             
         }
 
-        
+        private void comboBoxIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxIdioma_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

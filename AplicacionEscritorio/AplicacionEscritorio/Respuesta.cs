@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AplicacionEscritorio
 {
-    class Respuesta
+    public class Respuesta
     {
         public string respuesta { get; set; }
         public bool correcte { get; set; }

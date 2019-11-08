@@ -18,5 +18,7 @@ namespace AplicacionEscritorio
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new NuevaPregunta());
         }
+
+      
     }
 }
