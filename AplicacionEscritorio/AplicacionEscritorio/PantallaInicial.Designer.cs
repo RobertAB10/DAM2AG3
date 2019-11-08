@@ -33,7 +33,6 @@
             this.buttonSalir = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonImagenIdioma = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonIniciar
@@ -87,14 +86,6 @@
             this.buttonImagenIdioma.TabIndex = 4;
             this.buttonImagenIdioma.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(341, 67);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
-            // 
             // PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +93,6 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Universo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(810, 460);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.buttonImagenIdioma);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonSalir);
@@ -119,6 +109,5 @@
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonImagenIdioma;
-        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
