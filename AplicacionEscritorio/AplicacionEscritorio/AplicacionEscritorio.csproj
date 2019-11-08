@@ -64,8 +64,10 @@
     <Compile Include="PantallaInicial.Designer.cs">
       <DependentUpon>PantallaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respuesta.cs" />
     <EmbeddedResource Include="Modificar Pregunta.resx">
       <DependentUpon>Modificar Pregunta.cs</DependentUpon>
     </EmbeddedResource>

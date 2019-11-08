@@ -64,3 +64,14 @@ C:\Users\rober\OneDrive\Escritorio\mNactec-master\mNactec-master\AplicacionEscri
 C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
 C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
 C:\Users\rober\Source\Repos\DAM2AG32\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.pdb
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csprojAssemblyReference.cache
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Modificar_Pregunta.resources
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.NuevaPregunta.resources
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Properties.Resources.resources
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.GenerateResource.cache
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.CoreCompileInputs.cache
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
