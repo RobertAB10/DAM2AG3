@@ -74,6 +74,9 @@
     <EmbeddedResource Include="NuevaPregunta.resx">
       <DependentUpon>NuevaPregunta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallaInicial.resx">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
