@@ -51,8 +51,11 @@
             this.textBoxPregunta = new System.Windows.Forms.TextBox();
             this.labelPregunta = new System.Windows.Forms.Label();
             this.labelNuevaModificarPregunta = new System.Windows.Forms.Label();
+            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).BeginInit();
             this.groupBoxRespuestas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -258,14 +261,11 @@
             this.comboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNivel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNivel.FormattingEnabled = true;
-            this.comboBoxNivel.Items.AddRange(new object[] {
-            "Fácil",
-            "Normal",
-            "Difícil"});
             this.comboBoxNivel.Location = new System.Drawing.Point(538, 134);
             this.comboBoxNivel.Name = "comboBoxNivel";
             this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
             this.comboBoxNivel.TabIndex = 28;
+            this.comboBoxNivel.SelectedIndexChanged += new System.EventHandler(this.comboBoxNivel_SelectedIndexChanged);
             // 
             // textBoxPregunta
             // 
@@ -294,12 +294,30 @@
             this.labelNuevaModificarPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaModificarPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaModificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(250, 22);
+            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(251, 53);
             this.labelNuevaModificarPregunta.Name = "labelNuevaModificarPregunta";
             this.labelNuevaModificarPregunta.Size = new System.Drawing.Size(308, 37);
             this.labelNuevaModificarPregunta.TabIndex = 25;
             this.labelNuevaModificarPregunta.Text = "MODIFICAR PREGUNTA";
             this.labelNuevaModificarPregunta.Click += new System.EventHandler(this.labelNuevaModificarPregunta_Click);
+            // 
+            // comboBoxIdiomes
+            // 
+            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdiomes.FormattingEnabled = true;
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 12);
+            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
+            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxIdiomes.TabIndex = 36;
+            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
+            // 
+            // pictureBoxIdioma
+            // 
+            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 4);
+            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
+            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 29);
+            this.pictureBoxIdioma.TabIndex = 37;
+            this.pictureBoxIdioma.TabStop = false;
             // 
             // Modificar_Pregunta
             // 
@@ -307,7 +325,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Universo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(702, 531);
+            this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.pictureBoxIdioma);
+            this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxTema);
             this.Controls.Add(this.pictureBoxPregunta);
@@ -321,9 +341,11 @@
             this.Controls.Add(this.labelNuevaModificarPregunta);
             this.Name = "Modificar_Pregunta";
             this.Text = "Modificar_Pregunta";
+            this.Load += new System.EventHandler(this.Modificar_Pregunta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).EndInit();
             this.groupBoxRespuestas.ResumeLayout(false);
             this.groupBoxRespuestas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +376,7 @@
         private System.Windows.Forms.TextBox textBoxPregunta;
         private System.Windows.Forms.Label labelPregunta;
         private System.Windows.Forms.Label labelNuevaModificarPregunta;
+        private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.PictureBox pictureBoxIdioma;
     }
 }
