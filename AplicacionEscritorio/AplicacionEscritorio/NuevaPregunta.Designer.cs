@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaPregunta));
             this.labelNuevaPregunta = new System.Windows.Forms.Label();
             this.labelPregunta = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.pictureBoxPregunta = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxTema = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBoxRespuestas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +62,7 @@
             this.labelNuevaPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaPregunta.Location = new System.Drawing.Point(247, 22);
+            this.labelNuevaPregunta.Location = new System.Drawing.Point(362, 22);
             this.labelNuevaPregunta.Name = "labelNuevaPregunta";
             this.labelNuevaPregunta.Size = new System.Drawing.Size(257, 37);
             this.labelNuevaPregunta.TabIndex = 0;
@@ -252,7 +250,7 @@
             // 
             this.buttonConfirmar.BackColor = System.Drawing.Color.White;
             this.buttonConfirmar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.Location = new System.Drawing.Point(387, 475);
+            this.buttonConfirmar.Location = new System.Drawing.Point(599, 612);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(138, 37);
             this.buttonConfirmar.TabIndex = 20;
@@ -264,7 +262,7 @@
             this.buttonCancelar.BackColor = System.Drawing.Color.White;
             this.buttonCancelar.CausesValidation = false;
             this.buttonCancelar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(557, 475);
+            this.buttonCancelar.Location = new System.Drawing.Point(764, 612);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(108, 37);
             this.buttonCancelar.TabIndex = 21;
@@ -310,18 +308,13 @@
             this.comboBoxTema.Size = new System.Drawing.Size(121, 25);
             this.comboBoxTema.TabIndex = 23;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // NuevaPregunta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(690, 536);
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxTema);
             this.Controls.Add(this.pictureBoxPregunta);
@@ -369,7 +362,6 @@
         private System.Windows.Forms.PictureBox pictureBoxPregunta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxTema;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
