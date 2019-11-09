@@ -69,5 +69,10 @@ namespace AplicacionEscritorio
                 pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

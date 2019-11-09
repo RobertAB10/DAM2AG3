@@ -64,7 +64,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(263, 137);
+            this.label5.Location = new System.Drawing.Point(262, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 21);
             this.label5.TabIndex = 35;
@@ -76,7 +76,7 @@
             this.comboBoxTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTema.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTema.FormattingEnabled = true;
-            this.comboBoxTema.Location = new System.Drawing.Point(315, 134);
+            this.comboBoxTema.Location = new System.Drawing.Point(314, 142);
             this.comboBoxTema.Name = "comboBoxTema";
             this.comboBoxTema.Size = new System.Drawing.Size(121, 25);
             this.comboBoxTema.TabIndex = 34;
@@ -104,6 +104,7 @@
             this.buttonCancelar.TabIndex = 32;
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonConfirmar
             // 
@@ -143,7 +144,7 @@
             // textBoxRespuesta3
             // 
             this.textBoxRespuesta3.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRespuesta3.Location = new System.Drawing.Point(375, 48);
+            this.textBoxRespuesta3.Location = new System.Drawing.Point(410, 42);
             this.textBoxRespuesta3.Name = "textBoxRespuesta3";
             this.textBoxRespuesta3.Size = new System.Drawing.Size(219, 25);
             this.textBoxRespuesta3.TabIndex = 6;
@@ -151,7 +152,7 @@
             // textBoxRespuesta1
             // 
             this.textBoxRespuesta1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRespuesta1.Location = new System.Drawing.Point(54, 48);
+            this.textBoxRespuesta1.Location = new System.Drawing.Point(89, 42);
             this.textBoxRespuesta1.Name = "textBoxRespuesta1";
             this.textBoxRespuesta1.Size = new System.Drawing.Size(219, 25);
             this.textBoxRespuesta1.TabIndex = 4;
@@ -159,7 +160,7 @@
             // textBoxRespuesta2
             // 
             this.textBoxRespuesta2.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRespuesta2.Location = new System.Drawing.Point(54, 111);
+            this.textBoxRespuesta2.Location = new System.Drawing.Point(89, 105);
             this.textBoxRespuesta2.Name = "textBoxRespuesta2";
             this.textBoxRespuesta2.Size = new System.Drawing.Size(219, 25);
             this.textBoxRespuesta2.TabIndex = 5;
@@ -167,7 +168,7 @@
             // radioButtonRespuesta4
             // 
             this.radioButtonRespuesta4.AutoSize = true;
-            this.radioButtonRespuesta4.Location = new System.Drawing.Point(600, 117);
+            this.radioButtonRespuesta4.Location = new System.Drawing.Point(635, 111);
             this.radioButtonRespuesta4.Name = "radioButtonRespuesta4";
             this.radioButtonRespuesta4.Size = new System.Drawing.Size(14, 13);
             this.radioButtonRespuesta4.TabIndex = 16;
@@ -176,7 +177,7 @@
             // textBoxRespuesta4
             // 
             this.textBoxRespuesta4.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRespuesta4.Location = new System.Drawing.Point(375, 111);
+            this.textBoxRespuesta4.Location = new System.Drawing.Point(410, 105);
             this.textBoxRespuesta4.Name = "textBoxRespuesta4";
             this.textBoxRespuesta4.Size = new System.Drawing.Size(219, 25);
             this.textBoxRespuesta4.TabIndex = 7;
@@ -184,7 +185,7 @@
             // radioButtonRespuesta3
             // 
             this.radioButtonRespuesta3.AutoSize = true;
-            this.radioButtonRespuesta3.Location = new System.Drawing.Point(600, 51);
+            this.radioButtonRespuesta3.Location = new System.Drawing.Point(635, 45);
             this.radioButtonRespuesta3.Name = "radioButtonRespuesta3";
             this.radioButtonRespuesta3.Size = new System.Drawing.Size(14, 13);
             this.radioButtonRespuesta3.TabIndex = 15;
@@ -193,7 +194,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 51);
+            this.label1.Location = new System.Drawing.Point(66, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 21);
             this.label1.TabIndex = 8;
@@ -202,7 +203,7 @@
             // radioButtonRespuesta2
             // 
             this.radioButtonRespuesta2.AutoSize = true;
-            this.radioButtonRespuesta2.Location = new System.Drawing.Point(279, 117);
+            this.radioButtonRespuesta2.Location = new System.Drawing.Point(314, 111);
             this.radioButtonRespuesta2.Name = "radioButtonRespuesta2";
             this.radioButtonRespuesta2.Size = new System.Drawing.Size(14, 13);
             this.radioButtonRespuesta2.TabIndex = 14;
@@ -211,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 114);
+            this.label2.Location = new System.Drawing.Point(67, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 21);
             this.label2.TabIndex = 9;
@@ -220,7 +221,7 @@
             // radioButtonRespuesta1
             // 
             this.radioButtonRespuesta1.AutoSize = true;
-            this.radioButtonRespuesta1.Location = new System.Drawing.Point(278, 51);
+            this.radioButtonRespuesta1.Location = new System.Drawing.Point(313, 45);
             this.radioButtonRespuesta1.Name = "radioButtonRespuesta1";
             this.radioButtonRespuesta1.Size = new System.Drawing.Size(14, 13);
             this.radioButtonRespuesta1.TabIndex = 13;
@@ -229,7 +230,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(353, 51);
+            this.label3.Location = new System.Drawing.Point(388, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 21);
             this.label3.TabIndex = 10;
@@ -238,7 +239,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(353, 115);
+            this.label4.Location = new System.Drawing.Point(388, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 21);
             this.label4.TabIndex = 11;
@@ -250,7 +251,7 @@
             this.labelNivel.BackColor = System.Drawing.Color.Transparent;
             this.labelNivel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNivel.ForeColor = System.Drawing.Color.White;
-            this.labelNivel.Location = new System.Drawing.Point(486, 137);
+            this.labelNivel.Location = new System.Drawing.Point(485, 145);
             this.labelNivel.Name = "labelNivel";
             this.labelNivel.Size = new System.Drawing.Size(46, 21);
             this.labelNivel.TabIndex = 29;
@@ -262,7 +263,7 @@
             this.comboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNivel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNivel.FormattingEnabled = true;
-            this.comboBoxNivel.Location = new System.Drawing.Point(538, 134);
+            this.comboBoxNivel.Location = new System.Drawing.Point(537, 142);
             this.comboBoxNivel.Name = "comboBoxNivel";
             this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
             this.comboBoxNivel.TabIndex = 28;
@@ -271,7 +272,7 @@
             // textBoxPregunta
             // 
             this.textBoxPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPregunta.Location = new System.Drawing.Point(26, 251);
+            this.textBoxPregunta.Location = new System.Drawing.Point(26, 260);
             this.textBoxPregunta.Name = "textBoxPregunta";
             this.textBoxPregunta.Size = new System.Drawing.Size(504, 25);
             this.textBoxPregunta.TabIndex = 27;
@@ -283,7 +284,7 @@
             this.labelPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPregunta.ForeColor = System.Drawing.Color.White;
             this.labelPregunta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelPregunta.Location = new System.Drawing.Point(23, 220);
+            this.labelPregunta.Location = new System.Drawing.Point(23, 229);
             this.labelPregunta.Name = "labelPregunta";
             this.labelPregunta.Size = new System.Drawing.Size(176, 21);
             this.labelPregunta.TabIndex = 26;
@@ -295,7 +296,7 @@
             this.labelNuevaModificarPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaModificarPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaModificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(251, 53);
+            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(260, 67);
             this.labelNuevaModificarPregunta.Name = "labelNuevaModificarPregunta";
             this.labelNuevaModificarPregunta.Size = new System.Drawing.Size(308, 37);
             this.labelNuevaModificarPregunta.TabIndex = 25;
@@ -307,7 +308,7 @@
             this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 12);
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 20);
             this.comboBoxIdiomes.Name = "comboBoxIdiomes";
             this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
             this.comboBoxIdiomes.TabIndex = 36;
@@ -315,7 +316,7 @@
             // 
             // pictureBoxIdioma
             // 
-            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 4);
+            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 12);
             this.pictureBoxIdioma.Name = "pictureBoxIdioma";
             this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
             this.pictureBoxIdioma.TabIndex = 37;
