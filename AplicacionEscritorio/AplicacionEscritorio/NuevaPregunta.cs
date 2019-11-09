@@ -19,14 +19,10 @@ namespace AplicacionEscritorio
             MaximizeBox = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void NuevaPregunta_Load(object sender, EventArgs e)
         {
-
+            comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+            comboBoxNivel.Items.AddRange(Constants.Nivells);
         }
 
         private void radioButtonRespuestaCorrecta_CheckedChanged(object sender, EventArgs e)
@@ -34,11 +30,43 @@ namespace AplicacionEscritorio
 
         }
 
-        private void textBoxPregunta_TextChanged(object sender, EventArgs e)
+        private void pictureBoxPregunta_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
+                pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
+            }
         }
 
-        
+        private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String Idioma = comboBoxIdiomes.Text;
+            switch (Idioma)
+            {
+                case "Català":
+                    pictureBoxIdioma.Image = Properties.Resources.Catalana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+                    break;
+                case "Castellano":
+                    pictureBoxIdioma.Image = Properties.Resources.Espana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+                    break;
+
+                case "English":
+                    pictureBoxIdioma.Image = Properties.Resources.English;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+                    break;
+            }
+        }
+
+        private void buttonCancela_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
