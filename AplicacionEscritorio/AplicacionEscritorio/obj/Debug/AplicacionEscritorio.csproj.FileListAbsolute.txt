@@ -78,9 +78,6 @@ C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscrito
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
-C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
-C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
-C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.pdb
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csprojResolveAssemblyReference.cache
