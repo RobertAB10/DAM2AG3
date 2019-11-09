@@ -86,3 +86,4 @@ C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\o
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.PantallaInicial.resources
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Properties.Resources.resources
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.GenerateResource.Cache
+C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.ListaPreguntas.resources
