@@ -37,12 +37,36 @@ namespace AplicacionEscritorio
         private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            String Idioma = comboBoxIdiomes.SelectedText; 
+            String Idioma = comboBoxIdiomes.Text;
             switch (Idioma)
             {
                 case "Català":
-                    pictureBoxIdioma.Image = Image.FromFile("./Resources/catala.png");
+                    pictureBoxIdioma.Image = Properties.Resources.Catalana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
                     break;
+                case "Castellano":
+                    pictureBoxIdioma.Image = Properties.Resources.Espana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+                    break;
+
+                case "English":
+                    pictureBoxIdioma.Image = Properties.Resources.English;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+                    break;
+            }
+
+        }
+
+        private void pictureBoxPregunta_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
+                pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
     }

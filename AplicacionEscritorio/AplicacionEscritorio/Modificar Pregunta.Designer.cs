@@ -83,21 +83,22 @@
             // 
             // pictureBoxPregunta
             // 
-            this.pictureBoxPregunta.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPregunta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxPregunta.BackColor = System.Drawing.Color.White;
+            this.pictureBoxPregunta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPregunta.InitialImage = null;
             this.pictureBoxPregunta.Location = new System.Drawing.Point(26, 22);
             this.pictureBoxPregunta.Name = "pictureBoxPregunta";
             this.pictureBoxPregunta.Size = new System.Drawing.Size(167, 160);
             this.pictureBoxPregunta.TabIndex = 33;
             this.pictureBoxPregunta.TabStop = false;
+            this.pictureBoxPregunta.Click += new System.EventHandler(this.pictureBoxPregunta_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.White;
             this.buttonCancelar.CausesValidation = false;
             this.buttonCancelar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(560, 475);
+            this.buttonCancelar.Location = new System.Drawing.Point(624, 475);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(108, 37);
             this.buttonCancelar.TabIndex = 32;
@@ -108,7 +109,7 @@
             // 
             this.buttonConfirmar.BackColor = System.Drawing.Color.White;
             this.buttonConfirmar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.Location = new System.Drawing.Point(390, 475);
+            this.buttonConfirmar.Location = new System.Drawing.Point(467, 475);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(138, 37);
             this.buttonConfirmar.TabIndex = 31;
@@ -134,7 +135,7 @@
             this.groupBoxRespuestas.ForeColor = System.Drawing.Color.White;
             this.groupBoxRespuestas.Location = new System.Drawing.Point(15, 291);
             this.groupBoxRespuestas.Name = "groupBoxRespuestas";
-            this.groupBoxRespuestas.Size = new System.Drawing.Size(666, 169);
+            this.groupBoxRespuestas.Size = new System.Drawing.Size(717, 169);
             this.groupBoxRespuestas.TabIndex = 30;
             this.groupBoxRespuestas.TabStop = false;
             this.groupBoxRespuestas.Text = "Respuestas";
@@ -304,10 +305,11 @@
             // comboBoxIdiomes
             // 
             this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxIdiomes.FormattingEnabled = true;
             this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 12);
             this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
             this.comboBoxIdiomes.TabIndex = 36;
             this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
             // 
@@ -315,7 +317,7 @@
             // 
             this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 4);
             this.pictureBoxIdioma.Name = "pictureBoxIdioma";
-            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 29);
+            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
             this.pictureBoxIdioma.TabIndex = 37;
             this.pictureBoxIdioma.TabStop = false;
             // 
