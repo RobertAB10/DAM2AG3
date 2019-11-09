@@ -93,6 +93,26 @@ namespace AplicacionEscritorio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fondopantalla {
+            get {
+                object obj = ResourceManager.GetObject("Fondopantalla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap insert_picture_icon {
+            get {
+                object obj = ResourceManager.GetObject("insert-picture-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap luna {
             get {
                 object obj = ResourceManager.GetObject("luna", resourceCulture);
