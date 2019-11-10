@@ -86,3 +86,16 @@ C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\o
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.PantallaInicial.resources
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Properties.Resources.resources
 C:\Users\rober\Source\Repos\DAM2AG35\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.GenerateResource.Cache
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe.config
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.exe
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\AplicacionEscritorio.pdb
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csprojResolveAssemblyReference.cache
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Modificar_Pregunta.resources
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.NuevaPregunta.resources
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.PantallaInicial.resources
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.Properties.Resources.resources
+C:\Users\rober\Source\Repos\DAM2AG36\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.GenerateResource.Cache
