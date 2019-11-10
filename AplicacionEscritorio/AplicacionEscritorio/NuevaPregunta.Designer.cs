@@ -331,6 +331,7 @@
             this.buttonConfirma.TabIndex = 33;
             this.buttonConfirma.Text = "CONFIRMAR";
             this.buttonConfirma.UseVisualStyleBackColor = false;
+            this.buttonConfirma.Click += new System.EventHandler(this.buttonConfirma_Click);
             // 
             // pictureBoxIdioma
             // 
@@ -375,6 +376,7 @@
             this.Controls.Add(this.labelNuevaPregunta);
             this.Name = "NuevaPregunta";
             this.Text = "Nueva Pregunta";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NuevaPregunta_FormClosing);
             this.Load += new System.EventHandler(this.NuevaPregunta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).EndInit();
             this.groupBoxRespuestas.ResumeLayout(false);

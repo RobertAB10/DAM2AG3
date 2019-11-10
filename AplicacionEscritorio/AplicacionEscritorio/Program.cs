@@ -16,7 +16,7 @@ namespace AplicacionEscritorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListaPreguntas());
+            Application.Run(new NuevaPregunta());
         }
     }
 }
