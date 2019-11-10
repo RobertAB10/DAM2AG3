@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,21 @@ namespace AplicacionEscritorio
                     break;
             }
             return ruta;
+        }
+
+        private void guardarFichero(object sender, EventArgs e)
+        {
+            string ruta = rutaIdioma(sender, e);
+            JArray jArrayPreguntas = (JArray)JToken.FromObject(preguntas);
+
+            StreamWriter fichero = File.CreateText(ruta);
+            JsonTextWriter jsonwriter = new JsonTextWriter(fichero);
+
+            jArrayPreguntas.WriteTo(jsonwriter);
+
+            jsonwriter.Close();
+
+            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void pictureBoxPregunta_Click(object sender, EventArgs e)
@@ -104,13 +120,15 @@ namespace AplicacionEscritorio
                 //Por acabar
                 //
 
+
                 //Cargamos el JSON del idioma
                 string ruta = rutaIdioma(sender, e);
                 if (System.IO.File.Exists(ruta))
                 {
                     //MessageBox.Show("El fichero existe");
-                    JArray jArrayPeliculas = JArray.Parse(File.ReadAllText(ruta));
-                    preguntas = jArrayPeliculas.ToObject<List<Pregunta>>();
+                    JArray jArrayPreguntas = JArray.Parse(File.ReadAllText(ruta));
+                    preguntas = jArrayPreguntas.ToObject<List<Pregunta>>();
+                    textBoxRespuesta1.Text = ruta;
                 }
                 else
                 {
@@ -123,7 +141,7 @@ namespace AplicacionEscritorio
 
         private void NuevaPregunta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //guardarFichero();
+            guardarFichero(sender ,e);
         }
     }
 }
