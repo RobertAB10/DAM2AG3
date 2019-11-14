@@ -33,5 +33,11 @@ namespace AplicacionEscritorio
             NuevaPregunta nuevaPregunta = new NuevaPregunta();
             nuevaPregunta.ShowDialog();
         }
+
+        private void buttonListaPreguntas_Click(object sender, EventArgs e)
+        {
+            ListaPreguntas listaPreguntas = new ListaPreguntas();
+            listaPreguntas.ShowDialog();
+        }
     }
 }

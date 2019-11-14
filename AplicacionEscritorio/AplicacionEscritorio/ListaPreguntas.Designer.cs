@@ -33,6 +33,10 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.labelIdioma = new System.Windows.Forms.Label();
+            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.labelNivel = new System.Windows.Forms.Label();
+            this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +46,7 @@
             this.labelNuevaModificarPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaModificarPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaModificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(225, 25);
+            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(242, 19);
             this.labelNuevaModificarPregunta.Name = "labelNuevaModificarPregunta";
             this.labelNuevaModificarPregunta.Size = new System.Drawing.Size(285, 37);
             this.labelNuevaModificarPregunta.TabIndex = 26;
@@ -52,9 +56,9 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 114);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(720, 337);
             this.dataGridView1.TabIndex = 27;
             // 
             // buttonEditar
@@ -92,6 +96,51 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // labelIdioma
+            // 
+            this.labelIdioma.AutoSize = true;
+            this.labelIdioma.BackColor = System.Drawing.Color.Transparent;
+            this.labelIdioma.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdioma.ForeColor = System.Drawing.Color.White;
+            this.labelIdioma.Location = new System.Drawing.Point(21, 84);
+            this.labelIdioma.Name = "labelIdioma";
+            this.labelIdioma.Size = new System.Drawing.Size(176, 21);
+            this.labelIdioma.TabIndex = 36;
+            this.labelIdioma.Text = "Idioma de las preguntas";
+            // 
+            // comboBoxIdiomes
+            // 
+            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxIdiomes.FormattingEnabled = true;
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 80);
+            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
+            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxIdiomes.TabIndex = 37;
+            // 
+            // labelNivel
+            // 
+            this.labelNivel.AutoSize = true;
+            this.labelNivel.BackColor = System.Drawing.Color.Transparent;
+            this.labelNivel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNivel.ForeColor = System.Drawing.Color.White;
+            this.labelNivel.Location = new System.Drawing.Point(389, 84);
+            this.labelNivel.Name = "labelNivel";
+            this.labelNivel.Size = new System.Drawing.Size(164, 21);
+            this.labelNivel.TabIndex = 38;
+            this.labelNivel.Text = "Nivel de las preguntas";
+            // 
+            // comboBoxNivel
+            // 
+            this.comboBoxNivel.BackColor = System.Drawing.Color.White;
+            this.comboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNivel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNivel.FormattingEnabled = true;
+            this.comboBoxNivel.Location = new System.Drawing.Point(559, 80);
+            this.comboBoxNivel.Name = "comboBoxNivel";
+            this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxNivel.TabIndex = 39;
+            // 
             // ListaPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +148,10 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Fondopantalla;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.comboBoxNivel);
+            this.Controls.Add(this.labelNivel);
+            this.Controls.Add(this.comboBoxIdiomes);
+            this.Controls.Add(this.labelIdioma);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonEditar);
@@ -121,5 +174,9 @@
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label labelIdioma;
+        private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.Label labelNivel;
+        private System.Windows.Forms.ComboBox comboBoxNivel;
     }
 }

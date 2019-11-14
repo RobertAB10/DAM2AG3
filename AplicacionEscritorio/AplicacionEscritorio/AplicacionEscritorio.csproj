@@ -75,6 +75,7 @@
     <Compile Include="PantallaInicial.Designer.cs">
       <DependentUpon>PantallaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personaje.cs" />
     <Compile Include="Pregunta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +119,7 @@
   <ItemGroup>
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
+    <None Include="Resources\JSON\personajes.json" />
     <None Include="Resources\Fondopantalla1.png" />
     <None Include="Resources\insert-picture-icon.png" />
     <None Include="Resources\English.png" />
