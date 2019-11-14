@@ -29,41 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicial));
-            this.buttonIniciar = new System.Windows.Forms.Button();
-            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
+            this.buttonNuevaPregunta = new System.Windows.Forms.Button();
+            this.buttonListaPreguntas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonIniciar
+            // buttonNuevaPregunta
             // 
-            this.buttonIniciar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIniciar.Location = new System.Drawing.Point(208, 224);
-            this.buttonIniciar.Name = "buttonIniciar";
-            this.buttonIniciar.Size = new System.Drawing.Size(343, 54);
-            this.buttonIniciar.TabIndex = 0;
-            this.buttonIniciar.Text = "INICIAR";
-            this.buttonIniciar.UseVisualStyleBackColor = true;
+            this.buttonNuevaPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNuevaPregunta.Location = new System.Drawing.Point(208, 224);
+            this.buttonNuevaPregunta.Name = "buttonNuevaPregunta";
+            this.buttonNuevaPregunta.Size = new System.Drawing.Size(343, 54);
+            this.buttonNuevaPregunta.TabIndex = 0;
+            this.buttonNuevaPregunta.Text = "NUEVA PREGUNTA";
+            this.buttonNuevaPregunta.UseVisualStyleBackColor = true;
+            this.buttonNuevaPregunta.Click += new System.EventHandler(this.buttonNuevaPregunta_Click);
             // 
-            // pictureBoxIdioma
+            // buttonListaPreguntas
             // 
-            this.pictureBoxIdioma.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxIdioma.Location = new System.Drawing.Point(208, 428);
-            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
-            this.pictureBoxIdioma.Size = new System.Drawing.Size(132, 77);
-            this.pictureBoxIdioma.TabIndex = 1;
-            this.pictureBoxIdioma.TabStop = false;
-            // 
-            // comboBoxIdiomes
-            // 
-            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(355, 453);
-            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(196, 25);
-            this.comboBoxIdiomes.TabIndex = 39;
-            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
+            this.buttonListaPreguntas.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListaPreguntas.Location = new System.Drawing.Point(208, 310);
+            this.buttonListaPreguntas.Name = "buttonListaPreguntas";
+            this.buttonListaPreguntas.Size = new System.Drawing.Size(343, 54);
+            this.buttonListaPreguntas.TabIndex = 1;
+            this.buttonListaPreguntas.Text = "LISTA DE PREGUNTAS";
+            this.buttonListaPreguntas.UseVisualStyleBackColor = true;
             // 
             // PantallaInicial
             // 
@@ -72,22 +61,19 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
-            this.Controls.Add(this.comboBoxIdiomes);
-            this.Controls.Add(this.pictureBoxIdioma);
-            this.Controls.Add(this.buttonIniciar);
+            this.Controls.Add(this.buttonListaPreguntas);
+            this.Controls.Add(this.buttonNuevaPregunta);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PantallaInicial";
-            this.Text = "PantallaInicial";
+            this.Text = "Inicio";
             this.Load += new System.EventHandler(this.PantallaInicial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonIniciar;
-        private System.Windows.Forms.PictureBox pictureBoxIdioma;
-        private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.Button buttonNuevaPregunta;
+        private System.Windows.Forms.Button buttonListaPreguntas;
     }
 }

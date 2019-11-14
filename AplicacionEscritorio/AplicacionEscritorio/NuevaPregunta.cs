@@ -28,6 +28,7 @@ namespace AplicacionEscritorio
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
             comboBoxNivel.Items.AddRange(Constants.Nivells);
+            comboBoxIdiomes.SelectedIndex = 0;
         }
 
         private string rutaIdioma(object sender, EventArgs e)
@@ -141,7 +142,7 @@ namespace AplicacionEscritorio
 
         private void NuevaPregunta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            guardarFichero(sender ,e);
+            //guardarFichero(sender ,e);
         }
     }
 }
