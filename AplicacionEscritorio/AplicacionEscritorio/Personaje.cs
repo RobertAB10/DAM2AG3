@@ -11,8 +11,6 @@ namespace AplicacionEscritorio
         public string nombre { get; set; }
         public string imagen { get; set; }
         public string descripcion { get; set; }
-        public int rangoInicial { get; set; }
-        public int rangoFinal { get; set; }
 
         public Personaje()
         {

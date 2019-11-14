@@ -76,6 +76,7 @@
             this.buttonNuevoPersonaje.TabIndex = 2;
             this.buttonNuevoPersonaje.Text = "NUEVO PERSONAJE";
             this.buttonNuevoPersonaje.UseVisualStyleBackColor = true;
+            this.buttonNuevoPersonaje.Click += new System.EventHandler(this.buttonNuevoPersonaje_Click);
             // 
             // buttonListaPersonajes
             // 
@@ -102,6 +103,7 @@
             // pictureBoxCatala
             // 
             this.pictureBoxCatala.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Catalana;
+            this.pictureBoxCatala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxCatala.Location = new System.Drawing.Point(140, 447);
             this.pictureBoxCatala.Name = "pictureBoxCatala";
             this.pictureBoxCatala.Size = new System.Drawing.Size(95, 72);
@@ -111,6 +113,7 @@
             // pictureBoxEnglish
             // 
             this.pictureBoxEnglish.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.English;
+            this.pictureBoxEnglish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxEnglish.Location = new System.Drawing.Point(251, 447);
             this.pictureBoxEnglish.Name = "pictureBoxEnglish";
             this.pictureBoxEnglish.Size = new System.Drawing.Size(95, 72);
@@ -120,9 +123,11 @@
             // pictureBoxEspana
             // 
             this.pictureBoxEspana.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Espana;
+            this.pictureBoxEspana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxEspana.Location = new System.Drawing.Point(29, 447);
             this.pictureBoxEspana.Name = "pictureBoxEspana";
             this.pictureBoxEspana.Size = new System.Drawing.Size(95, 72);
+            this.pictureBoxEspana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxEspana.TabIndex = 28;
             this.pictureBoxEspana.TabStop = false;
             // 

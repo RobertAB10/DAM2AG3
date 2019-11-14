@@ -104,3 +104,4 @@ C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscrito
 C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.PantallaInicial.resources
 C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.csproj.CopyComplete
 C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.ListaPreguntas.resources
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.NuevoPersonaje.resources

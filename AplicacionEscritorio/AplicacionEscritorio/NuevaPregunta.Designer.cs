@@ -54,8 +54,8 @@
             this.groupBoxRespuestas = new System.Windows.Forms.GroupBox();
             this.buttonCancela = new System.Windows.Forms.Button();
             this.buttonConfirma = new System.Windows.Forms.Button();
-            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
             this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).BeginInit();
             this.groupBoxRespuestas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
@@ -333,14 +333,6 @@
             this.buttonConfirma.UseVisualStyleBackColor = false;
             this.buttonConfirma.Click += new System.EventHandler(this.buttonConfirma_Click);
             // 
-            // pictureBoxIdioma
-            // 
-            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 12);
-            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
-            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
-            this.pictureBoxIdioma.TabIndex = 39;
-            this.pictureBoxIdioma.TabStop = false;
-            // 
             // comboBoxIdiomes
             // 
             this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -351,6 +343,16 @@
             this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
             this.comboBoxIdiomes.TabIndex = 38;
             this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
+            // 
+            // pictureBoxIdioma
+            // 
+            this.pictureBoxIdioma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 12);
+            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
+            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
+            this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxIdioma.TabIndex = 39;
+            this.pictureBoxIdioma.TabStop = false;
             // 
             // NuevaPregunta
             // 
@@ -414,8 +416,8 @@
         private System.Windows.Forms.GroupBox groupBoxRespuestas;
         private System.Windows.Forms.Button buttonCancela;
         private System.Windows.Forms.Button buttonConfirma;
-        private System.Windows.Forms.PictureBox pictureBoxIdioma;
         private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.PictureBox pictureBoxIdioma;
     }
 }
 

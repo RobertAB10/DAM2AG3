@@ -317,9 +317,11 @@
             // 
             // pictureBoxIdioma
             // 
+            this.pictureBoxIdioma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 12);
             this.pictureBoxIdioma.Name = "pictureBoxIdioma";
             this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
+            this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxIdioma.TabIndex = 37;
             this.pictureBoxIdioma.TabStop = false;
             // 

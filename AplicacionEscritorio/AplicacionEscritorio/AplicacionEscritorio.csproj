@@ -69,6 +69,12 @@
     <Compile Include="NuevaPregunta.Designer.cs">
       <DependentUpon>NuevaPregunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoPersonaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoPersonaje.Designer.cs">
+      <DependentUpon>NuevoPersonaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaPregunta.resx">
       <DependentUpon>NuevaPregunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoPersonaje.resx">
+      <DependentUpon>NuevoPersonaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaInicial.resx">
       <DependentUpon>PantallaInicial.cs</DependentUpon>
@@ -119,13 +128,15 @@
   <ItemGroup>
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
-    <None Include="Resources\JSON\personajes.json" />
+    <None Include="Resources\JSON\personatgesCAT.json" />
     <None Include="Resources\Fondopantalla1.png" />
     <None Include="Resources\insert-picture-icon.png" />
     <None Include="Resources\English.png" />
     <None Include="Resources\Espana.png" />
     <None Include="Resources\Catalana.png" />
     <Content Include="Resources\Fondopantalla.png" />
+    <None Include="Resources\JSON\personatgesEN.json" />
+    <None Include="Resources\JSON\personatgesES.json" />
     <None Include="Resources\JSON\preguntesCAT.json" />
     <None Include="Resources\JSON\preguntesEN.json" />
     <None Include="Resources\JSON\PreguntesES.json" />

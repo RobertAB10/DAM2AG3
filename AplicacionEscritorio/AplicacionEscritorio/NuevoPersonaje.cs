@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,21 +12,31 @@ using System.Windows.Forms;
 
 namespace AplicacionEscritorio
 {
-    public partial class NuevaPregunta : Form
+    public partial class NuevoPersonaje : Form
     {
-        List<Pregunta> preguntas = new List<Pregunta>();
-       
-        public NuevaPregunta()
+
+        List<Personaje> personajes = new List<Personaje>();
+
+        public NuevoPersonaje()
         {
             InitializeComponent();
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             MaximizeBox = false;
         }
 
-        private void NuevaPregunta_Load(object sender, EventArgs e)
+        private void pictureBoxPersonaje_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxPersonaje.ImageLocation = openFileDialog.FileName;
+                pictureBoxPersonaje.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+        }
+
+        private void NuevoPersonaje_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
-            comboBoxNivel.Items.AddRange(Constants.Nivells);
             comboBoxIdiomes.SelectedIndex = 0;
         }
 
@@ -38,43 +47,18 @@ namespace AplicacionEscritorio
             switch (Idioma)
             {
                 case "Català":
-                    ruta = @"..\..\Resources\JSON\preguntesCAT.json";
+                    ruta = @"..\..\Resources\JSON\personatgesCAT.json";
                     break;
 
                 case "Castellano":
-                    ruta = @"..\..\Resources\JSON\preguntesES.json";
+                    ruta = @"..\..\Resources\JSON\personatgesES.json";
                     break;
 
                 case "English":
-                    ruta = @"..\..\Resources\JSON\preguntesEN.json";
+                    ruta = @"..\..\Resources\JSON\personatgesEN.json";
                     break;
             }
             return ruta;
-        }
-
-        private void guardarFichero(object sender, EventArgs e)
-        {
-            string ruta = rutaIdioma(sender, e);
-            JArray jArrayPreguntas = (JArray)JToken.FromObject(preguntas);
-
-            StreamWriter fichero = File.CreateText(ruta);
-            JsonTextWriter jsonwriter = new JsonTextWriter(fichero);
-
-            jArrayPreguntas.WriteTo(jsonwriter);
-
-            jsonwriter.Close();
-
-            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void pictureBoxPregunta_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
-                pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
-            }
         }
 
         private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,34 +85,32 @@ namespace AplicacionEscritorio
             }
         }
 
-        private void buttonCancela_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void buttonConfirma_Click(object sender, EventArgs e)
+        private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "") {
+            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "")
+            {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
-                Pregunta pregunta = new Pregunta();
-                pregunta.pregunta = textBoxPregunta.Text;
-                pregunta.imagen = pictureBoxPregunta.ImageLocation;
-                pregunta.nivell = comboBoxNivel.Text;
-                pregunta.respuestas = new List<Respuesta>();
+            else
+            {
+                Personaje personaje = new Personaje();
+                personaje.nombre = textBoxNombre.Text;
+                personaje.descripcion = textBoxDescripcion.Text;
+                personaje.imagen = pictureBoxPersonaje.ImageLocation;
 
-                //Por acabar
-                //Poner la pregunta en la lista
+                personajes.Add(personaje);
 
-
-                //Cargamos el JSON del idioma
                 string ruta = rutaIdioma(sender, e);
                 if (System.IO.File.Exists(ruta))
                 {
                     //MessageBox.Show("El fichero existe");
-                    JArray jArrayPreguntas = JArray.Parse(File.ReadAllText(ruta));
-                    preguntas = jArrayPreguntas.ToObject<List<Pregunta>>();
+                    JArray jArrayPersonajes = JArray.Parse(File.ReadAllText(ruta));
+                    personajes = jArrayPersonajes.ToObject<List<Personaje>>();
                 }
                 else
                 {
@@ -136,12 +118,6 @@ namespace AplicacionEscritorio
                     StreamWriter fichero = File.CreateText(ruta);
                 }
             }
-
-        }
-
-        private void NuevaPregunta_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //guardarFichero(sender ,e);
         }
     }
 }
