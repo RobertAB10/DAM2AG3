@@ -15,7 +15,7 @@ namespace AplicacionEscritorio
 {
     public partial class PantallaInicial : Form
     {
-
+        
         public PantallaInicial()
         {
             InitializeComponent();
@@ -44,6 +44,18 @@ namespace AplicacionEscritorio
         {
             NuevoPersonaje nuevoPersonaje = new NuevoPersonaje();
             nuevoPersonaje.ShowDialog();
+        }
+
+        private void pictureBoxInfo_Click(object sender, EventArgs e)
+        {
+            Informacion informacion = new Informacion();
+            informacion.Show();
+        }
+
+        private void buttonListaPersonajes_Click(object sender, EventArgs e)
+        {
+            ListaPersonajes listaPersonajes = new ListaPersonajes();
+            listaPersonajes.ShowDialog();
         }
     }
 }

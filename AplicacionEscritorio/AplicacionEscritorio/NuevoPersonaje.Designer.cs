@@ -46,7 +46,7 @@
             // 
             this.pictureBoxPersonaje.Location = new System.Drawing.Point(12, 121);
             this.pictureBoxPersonaje.Name = "pictureBoxPersonaje";
-            this.pictureBoxPersonaje.Size = new System.Drawing.Size(329, 398);
+            this.pictureBoxPersonaje.Size = new System.Drawing.Size(329, 350);
             this.pictureBoxPersonaje.TabIndex = 0;
             this.pictureBoxPersonaje.TabStop = false;
             this.pictureBoxPersonaje.Click += new System.EventHandler(this.pictureBoxPersonaje_Click);
@@ -57,7 +57,7 @@
             this.labelNuevaPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaPregunta.Location = new System.Drawing.Point(281, 59);
+            this.labelNuevaPregunta.Location = new System.Drawing.Point(240, 9);
             this.labelNuevaPregunta.Name = "labelNuevaPregunta";
             this.labelNuevaPregunta.Size = new System.Drawing.Size(261, 37);
             this.labelNuevaPregunta.TabIndex = 1;
@@ -105,6 +105,7 @@
             this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxIdioma.TabIndex = 41;
             this.pictureBoxIdioma.TabStop = false;
+            this.pictureBoxIdioma.Click += new System.EventHandler(this.pictureBoxIdioma_Click);
             // 
             // comboBoxIdiomes
             // 
@@ -123,7 +124,7 @@
             this.textBoxDescripcion.Location = new System.Drawing.Point(376, 252);
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(356, 135);
+            this.textBoxDescripcion.Size = new System.Drawing.Size(356, 219);
             this.textBoxDescripcion.TabIndex = 42;
             // 
             // buttonConfirmar

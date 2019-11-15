@@ -38,7 +38,7 @@ namespace AplicacionEscritorio
         private void NuevoPersonaje_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
-            comboBoxIdiomes.SelectedIndex = 0;
+            
         }
 
         private void guardarFichero()
@@ -77,26 +77,56 @@ namespace AplicacionEscritorio
             return ruta;
         }
 
+        private void comprobarFichero(String ruta)
+        {
+            //VACIAMOS LA LISTA
+            personajes.Clear();
+
+            if (System.IO.File.Exists(ruta))
+            {
+                //MessageBox.Show("El fichero existe");
+                JArray jArrayPersonajes = JArray.Parse(File.ReadAllText(ruta));
+                personajes = jArrayPersonajes.ToObject<List<Personaje>>();
+            }
+            else
+            {
+                //MessageBox.Show("Fichero creado");
+                StreamWriter fichero = File.CreateText(ruta);
+                fichero.Close();
+            }
+
+        }
+
         private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            String ruta = rutaIdioma();
+
             String Idioma = comboBoxIdiomes.Text;
+
             switch (Idioma)
             {
                 case "Català":
                     pictureBoxIdioma.Image = Properties.Resources.Catalana;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
+                    comprobarFichero(ruta);
+
                     break;
+
                 case "Castellano":
                     pictureBoxIdioma.Image = Properties.Resources.Espana;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
+                    comprobarFichero(ruta);
+
                     break;
 
                 case "English":
                     pictureBoxIdioma.Image = Properties.Resources.English;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
+                    comprobarFichero(ruta);
+
                     break;
             }
         }
@@ -108,7 +138,7 @@ namespace AplicacionEscritorio
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "")
+            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex< 0)
             {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -122,22 +152,17 @@ namespace AplicacionEscritorio
                 personajes.Add(personaje);
 
                 string ruta = rutaIdioma();
-                if (System.IO.File.Exists(ruta))
-                {
-                    //MessageBox.Show("El fichero existe");
-                    JArray jArrayPersonajes = JArray.Parse(File.ReadAllText(ruta));
-                    personajes = jArrayPersonajes.ToObject<List<Personaje>>();
-                }
-                else
-                {
-                    //MessageBox.Show("Fichero creado");
-                    StreamWriter fichero = File.CreateText(ruta);
-                    JArray jArrayPersonajes = JArray.Parse(File.ReadAllText(ruta));
-                    personajes = jArrayPersonajes.ToObject<List<Personaje>>();
-                }
+
+                guardarFichero();
+                
+                //CERRAMOS EL FORM
                 this.Close();
             }
         }
 
+        private void pictureBoxIdioma_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,10 +39,12 @@
             this.pictureBoxEspana = new System.Windows.Forms.PictureBox();
             this.labelExportarPersonajes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonNuevaPregunta
@@ -87,6 +89,7 @@
             this.buttonListaPersonajes.TabIndex = 3;
             this.buttonListaPersonajes.Text = "LISTA PERSONAJES";
             this.buttonListaPersonajes.UseVisualStyleBackColor = true;
+            this.buttonListaPersonajes.Click += new System.EventHandler(this.buttonListaPersonajes_Click);
             // 
             // labelExportarPreguntas
             // 
@@ -153,6 +156,18 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBoxInfo
+            // 
+            this.pictureBoxInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo.BackgroundImage")));
+            this.pictureBoxInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxInfo.Location = new System.Drawing.Point(684, 12);
+            this.pictureBoxInfo.Name = "pictureBoxInfo";
+            this.pictureBoxInfo.Size = new System.Drawing.Size(48, 41);
+            this.pictureBoxInfo.TabIndex = 31;
+            this.pictureBoxInfo.TabStop = false;
+            this.pictureBoxInfo.Click += new System.EventHandler(this.pictureBoxInfo_Click);
+            // 
             // PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +175,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.pictureBoxInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelExportarPersonajes);
             this.Controls.Add(this.pictureBoxEspana);
@@ -178,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +212,6 @@
         private System.Windows.Forms.PictureBox pictureBoxEspana;
         private System.Windows.Forms.Label labelExportarPersonajes;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxInfo;
     }
 }
