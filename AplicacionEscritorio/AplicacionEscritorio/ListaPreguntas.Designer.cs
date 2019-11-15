@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelNuevaModificarPregunta = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelLista = new System.Windows.Forms.Label();
+            this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -37,29 +37,29 @@
             this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             this.labelNivel = new System.Windows.Forms.Label();
             this.comboBoxNivel = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelNuevaModificarPregunta
+            // labelLista
             // 
-            this.labelNuevaModificarPregunta.AutoSize = true;
-            this.labelNuevaModificarPregunta.BackColor = System.Drawing.Color.Transparent;
-            this.labelNuevaModificarPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNuevaModificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(242, 19);
-            this.labelNuevaModificarPregunta.Name = "labelNuevaModificarPregunta";
-            this.labelNuevaModificarPregunta.Size = new System.Drawing.Size(285, 37);
-            this.labelNuevaModificarPregunta.TabIndex = 26;
-            this.labelNuevaModificarPregunta.Text = "LISTA DE PREGUNTAS";
+            this.labelLista.AutoSize = true;
+            this.labelLista.BackColor = System.Drawing.Color.Transparent;
+            this.labelLista.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLista.ForeColor = System.Drawing.Color.White;
+            this.labelLista.Location = new System.Drawing.Point(242, 19);
+            this.labelLista.Name = "labelLista";
+            this.labelLista.Size = new System.Drawing.Size(285, 37);
+            this.labelLista.TabIndex = 26;
+            this.labelLista.Text = "LISTA DE PREGUNTAS";
             // 
-            // dataGridView1
+            // dataGridViewPreguntas
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 114);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 337);
-            this.dataGridView1.TabIndex = 27;
+            this.dataGridViewPreguntas.AllowUserToOrderColumns = true;
+            this.dataGridViewPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 114);
+            this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
+            this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
+            this.dataGridViewPreguntas.TabIndex = 27;
             // 
             // buttonEditar
             // 
@@ -155,13 +155,13 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelNuevaModificarPregunta);
+            this.Controls.Add(this.dataGridViewPreguntas);
+            this.Controls.Add(this.labelLista);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ListaPreguntas";
             this.Text = "ListaPreguntas";
             this.Load += new System.EventHandler(this.ListaPreguntas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,8 +169,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelNuevaModificarPregunta;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelLista;
+        private System.Windows.Forms.DataGridView dataGridViewPreguntas;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;

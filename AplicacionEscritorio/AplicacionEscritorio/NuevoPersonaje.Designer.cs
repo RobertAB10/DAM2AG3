@@ -170,7 +170,6 @@
             this.Controls.Add(this.pictureBoxPersonaje);
             this.Name = "NuevoPersonaje";
             this.Text = "Nuevo Personaje";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NuevoPersonaje_FormClosing);
             this.Load += new System.EventHandler(this.NuevoPersonaje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPersonaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();

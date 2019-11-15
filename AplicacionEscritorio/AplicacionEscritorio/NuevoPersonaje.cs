@@ -139,9 +139,5 @@ namespace AplicacionEscritorio
             }
         }
 
-        private void NuevoPersonaje_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            guardarFichero();
-        }
     }
 }
