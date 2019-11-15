@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,22 @@ namespace AplicacionEscritorio
             comboBoxIdiomes.SelectedIndex = 0;
         }
 
-        private string rutaIdioma(object sender, EventArgs e)
+        private void guardarFichero()
+        {
+            string ruta = rutaIdioma();
+            JArray jArrayPersonajes = (JArray)JToken.FromObject(personajes);
+
+            StreamWriter fichero = File.CreateText(ruta);
+            JsonTextWriter jsonwriter = new JsonTextWriter(fichero);
+
+            jArrayPersonajes.WriteTo(jsonwriter);
+
+            jsonwriter.Close();
+
+            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private string rutaIdioma()
         {
             string ruta = "";
             String Idioma = comboBoxIdiomes.Text;
@@ -105,7 +121,7 @@ namespace AplicacionEscritorio
 
                 personajes.Add(personaje);
 
-                string ruta = rutaIdioma(sender, e);
+                string ruta = rutaIdioma();
                 if (System.IO.File.Exists(ruta))
                 {
                     //MessageBox.Show("El fichero existe");
@@ -116,8 +132,16 @@ namespace AplicacionEscritorio
                 {
                     //MessageBox.Show("Fichero creado");
                     StreamWriter fichero = File.CreateText(ruta);
+                    JArray jArrayPersonajes = JArray.Parse(File.ReadAllText(ruta));
+                    personajes = jArrayPersonajes.ToObject<List<Personaje>>();
                 }
+                this.Close();
             }
+        }
+
+        private void NuevoPersonaje_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            guardarFichero();
         }
     }
 }

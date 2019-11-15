@@ -128,15 +128,12 @@
   <ItemGroup>
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
-    <None Include="Resources\JSON\personatgesCAT.json" />
     <None Include="Resources\Fondopantalla1.png" />
     <None Include="Resources\insert-picture-icon.png" />
     <None Include="Resources\English.png" />
     <None Include="Resources\Espana.png" />
     <None Include="Resources\Catalana.png" />
     <Content Include="Resources\Fondopantalla.png" />
-    <None Include="Resources\JSON\personatgesEN.json" />
-    <None Include="Resources\JSON\personatgesES.json" />
     <None Include="Resources\JSON\preguntesCAT.json" />
     <None Include="Resources\JSON\preguntesEN.json" />
     <None Include="Resources\JSON\PreguntesES.json" />
