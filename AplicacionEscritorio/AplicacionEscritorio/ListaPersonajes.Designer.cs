@@ -35,6 +35,9 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.dataGridViewPersonajes = new System.Windows.Forms.DataGridView();
             this.labelLista = new System.Windows.Forms.Label();
+            this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,10 +46,11 @@
             this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 83);
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(209, 87);
             this.comboBoxIdiomes.Name = "comboBoxIdiomes";
             this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
             this.comboBoxIdiomes.TabIndex = 46;
+            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
             // 
             // labelIdioma
             // 
@@ -71,6 +75,7 @@
             this.buttonCancelar.TabIndex = 44;
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonEliminar
             // 
@@ -96,10 +101,16 @@
             // 
             // dataGridViewPersonajes
             // 
-            this.dataGridViewPersonajes.AllowUserToOrderColumns = true;
+            this.dataGridViewPersonajes.AllowUserToAddRows = false;
+            this.dataGridViewPersonajes.AllowUserToDeleteRows = false;
             this.dataGridViewPersonajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPersonajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Personaje,
+            this.Descripción,
+            this.Imagen});
             this.dataGridViewPersonajes.Location = new System.Drawing.Point(12, 117);
             this.dataGridViewPersonajes.Name = "dataGridViewPersonajes";
+            this.dataGridViewPersonajes.ReadOnly = true;
             this.dataGridViewPersonajes.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
             // 
@@ -114,6 +125,27 @@
             this.labelLista.Size = new System.Drawing.Size(293, 37);
             this.labelLista.TabIndex = 40;
             this.labelLista.Text = "LISTA DE PERSONAJES";
+            // 
+            // Personaje
+            // 
+            this.Personaje.DataPropertyName = "nombre";
+            this.Personaje.HeaderText = "Personaje";
+            this.Personaje.Name = "Personaje";
+            this.Personaje.ReadOnly = true;
+            // 
+            // Descripción
+            // 
+            this.Descripción.DataPropertyName = "descripcion";
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            // 
+            // Imagen
+            // 
+            this.Imagen.DataPropertyName = "imagen";
+            this.Imagen.HeaderText = "Imagen";
+            this.Imagen.Name = "Imagen";
+            this.Imagen.ReadOnly = true;
             // 
             // ListaPersonajes
             // 
@@ -131,6 +163,7 @@
             this.Controls.Add(this.labelLista);
             this.Name = "ListaPersonajes";
             this.Text = "Lista Personajes";
+            this.Load += new System.EventHandler(this.ListaPersonajes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,5 +178,8 @@
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.DataGridView dataGridViewPersonajes;
         private System.Windows.Forms.Label labelLista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
     }
 }

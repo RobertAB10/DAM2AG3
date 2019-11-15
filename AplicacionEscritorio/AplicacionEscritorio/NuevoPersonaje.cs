@@ -109,7 +109,6 @@ namespace AplicacionEscritorio
                     pictureBoxIdioma.Image = Properties.Resources.Catalana;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
-                    comprobarFichero(ruta);
 
                     break;
 
@@ -117,7 +116,6 @@ namespace AplicacionEscritorio
                     pictureBoxIdioma.Image = Properties.Resources.Espana;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
-                    comprobarFichero(ruta);
 
                     break;
 
@@ -125,7 +123,6 @@ namespace AplicacionEscritorio
                     pictureBoxIdioma.Image = Properties.Resources.English;
                     pictureBoxIdioma.Refresh();
                     pictureBoxIdioma.Visible = true;
-                    comprobarFichero(ruta);
 
                     break;
             }
@@ -144,14 +141,16 @@ namespace AplicacionEscritorio
             }
             else
             {
+
+                string ruta = rutaIdioma();
+                comprobarFichero(ruta);
+
                 Personaje personaje = new Personaje();
                 personaje.nombre = textBoxNombre.Text;
                 personaje.descripcion = textBoxDescripcion.Text;
                 personaje.imagen = pictureBoxPersonaje.ImageLocation;
 
                 personajes.Add(personaje);
-
-                string ruta = rutaIdioma();
 
                 guardarFichero();
                 
