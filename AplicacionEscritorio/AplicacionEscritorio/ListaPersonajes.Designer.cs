@@ -34,10 +34,10 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.dataGridViewPersonajes = new System.Windows.Forms.DataGridView();
-            this.labelLista = new System.Windows.Forms.Label();
             this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelLista = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +87,7 @@
             this.buttonEliminar.TabIndex = 43;
             this.buttonEliminar.Text = "ELIMINAR";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonEditar
             // 
@@ -114,18 +115,6 @@
             this.dataGridViewPersonajes.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
             // 
-            // labelLista
-            // 
-            this.labelLista.AutoSize = true;
-            this.labelLista.BackColor = System.Drawing.Color.Transparent;
-            this.labelLista.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLista.ForeColor = System.Drawing.Color.White;
-            this.labelLista.Location = new System.Drawing.Point(242, 22);
-            this.labelLista.Name = "labelLista";
-            this.labelLista.Size = new System.Drawing.Size(293, 37);
-            this.labelLista.TabIndex = 40;
-            this.labelLista.Text = "LISTA DE PERSONAJES";
-            // 
             // Personaje
             // 
             this.Personaje.DataPropertyName = "nombre";
@@ -146,6 +135,18 @@
             this.Imagen.HeaderText = "Imagen";
             this.Imagen.Name = "Imagen";
             this.Imagen.ReadOnly = true;
+            // 
+            // labelLista
+            // 
+            this.labelLista.AutoSize = true;
+            this.labelLista.BackColor = System.Drawing.Color.Transparent;
+            this.labelLista.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLista.ForeColor = System.Drawing.Color.White;
+            this.labelLista.Location = new System.Drawing.Point(242, 22);
+            this.labelLista.Name = "labelLista";
+            this.labelLista.Size = new System.Drawing.Size(293, 37);
+            this.labelLista.TabIndex = 40;
+            this.labelLista.Text = "LISTA DE PERSONAJES";
             // 
             // ListaPersonajes
             // 

@@ -136,11 +136,12 @@
             // 
             this.pictureBoxPregunta.BackColor = System.Drawing.Color.White;
             this.pictureBoxPregunta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPregunta.BackgroundImage")));
-            this.pictureBoxPregunta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxPregunta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPregunta.InitialImage = null;
             this.pictureBoxPregunta.Location = new System.Drawing.Point(23, 22);
             this.pictureBoxPregunta.Name = "pictureBoxPregunta";
             this.pictureBoxPregunta.Size = new System.Drawing.Size(167, 160);
+            this.pictureBoxPregunta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPregunta.TabIndex = 22;
             this.pictureBoxPregunta.TabStop = false;
             this.pictureBoxPregunta.Click += new System.EventHandler(this.pictureBoxPregunta_Click);
@@ -201,10 +202,12 @@
             // radioButtonRespuesta1
             // 
             this.radioButtonRespuesta1.AutoSize = true;
+            this.radioButtonRespuesta1.Checked = true;
             this.radioButtonRespuesta1.Location = new System.Drawing.Point(319, 49);
             this.radioButtonRespuesta1.Name = "radioButtonRespuesta1";
             this.radioButtonRespuesta1.Size = new System.Drawing.Size(14, 13);
             this.radioButtonRespuesta1.TabIndex = 13;
+            this.radioButtonRespuesta1.TabStop = true;
             this.radioButtonRespuesta1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -378,7 +381,6 @@
             this.Controls.Add(this.labelNuevaPregunta);
             this.Name = "NuevaPregunta";
             this.Text = "Nueva Pregunta";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NuevaPregunta_FormClosing);
             this.Load += new System.EventHandler(this.NuevaPregunta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).EndInit();
             this.groupBoxRespuestas.ResumeLayout(false);

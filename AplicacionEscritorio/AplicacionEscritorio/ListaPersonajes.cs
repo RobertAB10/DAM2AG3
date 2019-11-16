@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace AplicacionEscritorio
         public ListaPersonajes()
         {
             InitializeComponent();
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            MaximizeBox = false;
         }
 
         private void ListaPersonajes_Load(object sender, EventArgs e)
@@ -33,6 +36,20 @@ namespace AplicacionEscritorio
             dataGridViewPersonajes.DataSource = personajes;
         }
 
+        private void guardarFichero()
+        {
+            string ruta = rutaIdioma();
+            JArray jArrayPersonajes = (JArray)JToken.FromObject(personajes);
+
+            StreamWriter fichero = File.CreateText(ruta);
+            JsonTextWriter jsonwriter = new JsonTextWriter(fichero);
+
+            jArrayPersonajes.WriteTo(jsonwriter);
+
+            jsonwriter.Close();
+
+            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
 
         private string rutaIdioma()
         {
@@ -102,5 +119,24 @@ namespace AplicacionEscritorio
         {
             this.Close();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewPersonajes.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow personaje in dataGridViewPersonajes.SelectedRows)
+                {
+                    personajes.Remove((Personaje)personaje.DataBoundItem);
+                }
+                refrescar();
+                guardarFichero();
+                
+            }
+            else
+            {
+                MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

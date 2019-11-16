@@ -16,7 +16,7 @@ namespace AplicacionEscritorio
     public partial class NuevaPregunta : Form
     {
         List<Pregunta> preguntas = new List<Pregunta>();
-       
+
         public NuevaPregunta()
         {
             InitializeComponent();
@@ -28,10 +28,9 @@ namespace AplicacionEscritorio
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
             comboBoxNivel.Items.AddRange(Constants.Nivells);
-            comboBoxIdiomes.SelectedIndex = 0;
         }
 
-        private string rutaIdioma(object sender, EventArgs e)
+        private string rutaIdioma()
         {
             string ruta = "";
             String Idioma = comboBoxIdiomes.Text;
@@ -52,9 +51,30 @@ namespace AplicacionEscritorio
             return ruta;
         }
 
-        private void guardarFichero(object sender, EventArgs e)
+        private void comprobarFichero(String ruta)
         {
-            string ruta = rutaIdioma(sender, e);
+            //VACIAMOS LA LISTA
+            preguntas.Clear();
+
+            if (System.IO.File.Exists(ruta))
+            {
+                //MessageBox.Show("El fichero existe");
+                JArray jArrayPreguntas = JArray.Parse(File.ReadAllText(ruta));
+                preguntas = jArrayPreguntas.ToObject<List<Pregunta>>();
+            }
+            else
+            {
+                //MessageBox.Show("Fichero creado");
+                StreamWriter fichero = File.CreateText(ruta);
+                fichero.Close();
+            }
+
+        }
+
+
+        private void guardarFichero()
+        {
+            string ruta = rutaIdioma();
             JArray jArrayPreguntas = (JArray)JToken.FromObject(preguntas);
 
             StreamWriter fichero = File.CreateText(ruta);
@@ -108,40 +128,101 @@ namespace AplicacionEscritorio
 
         private void buttonConfirma_Click(object sender, EventArgs e)
         {
-            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "") {
+
+            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "" || comboBoxIdiomes.SelectedIndex < 0)
+            {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
+            else
+            {
+
+                String ruta = rutaIdioma();
+                comprobarFichero(ruta);
+
                 Pregunta pregunta = new Pregunta();
                 pregunta.pregunta = textBoxPregunta.Text;
                 pregunta.imagen = pictureBoxPregunta.ImageLocation;
                 pregunta.nivell = comboBoxNivel.Text;
+                pregunta.tema = comboBoxTema.Text;
                 pregunta.respuestas = new List<Respuesta>();
 
-                //Por acabar
-                //Poner la pregunta en la lista
-
-
-                //Cargamos el JSON del idioma
-                string ruta = rutaIdioma(sender, e);
-                if (System.IO.File.Exists(ruta))
+                //PREGUNTAR A FRANCISCO
+                if (textBoxRespuesta1.Text != "")
                 {
-                    //MessageBox.Show("El fichero existe");
-                    JArray jArrayPreguntas = JArray.Parse(File.ReadAllText(ruta));
-                    preguntas = jArrayPreguntas.ToObject<List<Pregunta>>();
+                    Respuesta respuesta = new Respuesta();
+                    respuesta.respuesta = textBoxRespuesta1.Text;
+                    if (radioButtonRespuesta1.Checked == true)
+                    {
+                        respuesta.correcte = true;
+                    }
+                    else
+                    {
+                        respuesta.correcte = false;
+                    }
+
+                    pregunta.respuestas.Add(respuesta);
                 }
-                else
+
+                if (textBoxRespuesta2.Text != "")
                 {
-                    //MessageBox.Show("Fichero creado");
-                    StreamWriter fichero = File.CreateText(ruta);
+                    Respuesta respuesta = new Respuesta();
+                    respuesta.respuesta = textBoxRespuesta2.Text;
+                    if (radioButtonRespuesta2.Checked == true)
+                    {
+                        respuesta.correcte = true;
+                    }
+                    else
+                    {
+                        respuesta.correcte = false;
+                    }
+
+                    pregunta.respuestas.Add(respuesta);
                 }
+
+                if (textBoxRespuesta3.Text != "")
+                {
+                    Respuesta respuesta = new Respuesta();
+                    respuesta.respuesta = textBoxRespuesta3.Text;
+                    if (radioButtonRespuesta3.Checked == true)
+                    {
+                        respuesta.correcte = true;
+                    }
+                    else
+                    {
+                        respuesta.correcte = false;
+                    }
+
+                    pregunta.respuestas.Add(respuesta);
+
+                }
+
+                if (textBoxRespuesta4.Text != "")
+                {
+                    Respuesta respuesta = new Respuesta();
+                    respuesta.respuesta = textBoxRespuesta4.Text;
+                    if (radioButtonRespuesta4.Checked == true)
+                    {
+                        respuesta.correcte = true;
+                    }
+                    else
+                    {
+                        respuesta.correcte = false;
+                    }
+
+                    pregunta.respuestas.Add(respuesta);
+
+                }
+
+                preguntas.Add(pregunta);
+
             }
 
+            //LLAMAMOS A LA FUNCION DE GUARDAR
+            guardarFichero();
+            //CERRAMOS EL FORM
+            this.Close();
+
         }
 
-        private void NuevaPregunta_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //guardarFichero(sender ,e);
-        }
     }
 }

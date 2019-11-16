@@ -38,12 +38,14 @@
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPersonaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxPersonaje
             // 
+            this.pictureBoxPersonaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPersonaje.Location = new System.Drawing.Point(12, 121);
             this.pictureBoxPersonaje.Name = "pictureBoxPersonaje";
             this.pictureBoxPersonaje.Size = new System.Drawing.Size(329, 350);
@@ -105,7 +107,6 @@
             this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxIdioma.TabIndex = 41;
             this.pictureBoxIdioma.TabStop = false;
-            this.pictureBoxIdioma.Click += new System.EventHandler(this.pictureBoxIdioma_Click);
             // 
             // comboBoxIdiomes
             // 
@@ -152,6 +153,19 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(85, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 21);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Imagen del personaje";
+            // 
             // NuevoPersonaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +173,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Fondopantalla;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.textBoxDescripcion);
@@ -191,5 +206,6 @@
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label label1;
     }
 }

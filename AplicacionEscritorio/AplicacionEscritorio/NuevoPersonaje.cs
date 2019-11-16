@@ -38,7 +38,7 @@ namespace AplicacionEscritorio
         private void NuevoPersonaje_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
-            
+
         }
 
         private void guardarFichero()
@@ -135,7 +135,7 @@ namespace AplicacionEscritorio
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex< 0)
+            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex < 0)
             {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -152,16 +152,13 @@ namespace AplicacionEscritorio
 
                 personajes.Add(personaje);
 
+                //LLAMAMOS A LA FUNCION DE GUARDAR
                 guardarFichero();
-                
+
                 //CERRAMOS EL FORM
                 this.Close();
             }
         }
 
-        private void pictureBoxIdioma_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

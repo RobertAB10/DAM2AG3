@@ -69,11 +69,11 @@
     <Compile Include="ListaPreguntas.Designer.cs">
       <DependentUpon>ListaPreguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificar Pregunta.cs">
+    <Compile Include="ModificarPregunta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modificar Pregunta.Designer.cs">
-      <DependentUpon>Modificar Pregunta.cs</DependentUpon>
+    <Compile Include="ModificarPregunta.Designer.cs">
+      <DependentUpon>ModificarPregunta.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevaPregunta.cs">
       <SubType>Form</SubType>
@@ -107,8 +107,8 @@
     <EmbeddedResource Include="ListaPreguntas.resx">
       <DependentUpon>ListaPreguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modificar Pregunta.resx">
-      <DependentUpon>Modificar Pregunta.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarPregunta.resx">
+      <DependentUpon>ModificarPregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaPregunta.resx">
       <DependentUpon>NuevaPregunta.cs</DependentUpon>
@@ -152,13 +152,12 @@
     <None Include="Resources\Espana.png" />
     <None Include="Resources\Catalana.png" />
     <Content Include="Resources\Fondopantalla.png" />
-    <None Include="Resources\JSON\preguntesCAT.json" />
-    <None Include="Resources\JSON\preguntesEN.json" />
-    <None Include="Resources\JSON\PreguntesES.json" />
     <None Include="Resources\luna.png" />
     <None Include="Resources\Universo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\JSON\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

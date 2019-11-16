@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Los TEXTBOXs nos servirá para escribir las respuestas de cada pregunta, en caso que esté vacio no se guardará ninguna respuesta. EL RADIOBUTON nos servirá para indicar qual es la resuesta correcta de la pregunta.</value>
+  </data>
 </root>
