@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             this.labelLista = new System.Windows.Forms.Label();
-            this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelIdioma = new System.Windows.Forms.Label();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             this.labelNivel = new System.Windows.Forms.Label();
             this.comboBoxNivel = new System.Windows.Forms.ComboBox();
+            this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
+            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,15 +55,6 @@
             this.labelLista.Size = new System.Drawing.Size(285, 37);
             this.labelLista.TabIndex = 26;
             this.labelLista.Text = "LISTA DE PREGUNTAS";
-            // 
-            // dataGridViewPreguntas
-            // 
-            this.dataGridViewPreguntas.AllowUserToOrderColumns = true;
-            this.dataGridViewPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 114);
-            this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
-            this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
-            this.dataGridViewPreguntas.TabIndex = 27;
             // 
             // buttonEditar
             // 
@@ -82,6 +77,7 @@
             this.buttonEliminar.TabIndex = 33;
             this.buttonEliminar.Text = "ELIMINAR";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonCancelar
             // 
@@ -108,16 +104,6 @@
             this.labelIdioma.TabIndex = 36;
             this.labelIdioma.Text = "Idioma de las preguntas";
             // 
-            // comboBoxIdiomes
-            // 
-            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 80);
-            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxIdiomes.TabIndex = 37;
-            // 
             // labelNivel
             // 
             this.labelNivel.AutoSize = true;
@@ -141,6 +127,61 @@
             this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
             this.comboBoxNivel.TabIndex = 39;
             // 
+            // dataGridViewPreguntas
+            // 
+            this.dataGridViewPreguntas.AllowUserToAddRows = false;
+            this.dataGridViewPreguntas.AllowUserToDeleteRows = false;
+            this.dataGridViewPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPreguntas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Personaje,
+            this.Nivel,
+            this.Tema,
+            this.Imagen});
+            this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 111);
+            this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
+            this.dataGridViewPreguntas.ReadOnly = true;
+            this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
+            this.dataGridViewPreguntas.TabIndex = 42;
+            // 
+            // comboBoxIdiomes
+            // 
+            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxIdiomes.FormattingEnabled = true;
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 80);
+            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
+            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxIdiomes.TabIndex = 43;
+            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged_1);
+            // 
+            // Personaje
+            // 
+            this.Personaje.DataPropertyName = "pregunta";
+            this.Personaje.HeaderText = "Pregunta";
+            this.Personaje.Name = "Personaje";
+            this.Personaje.ReadOnly = true;
+            // 
+            // Nivel
+            // 
+            this.Nivel.DataPropertyName = "nivel";
+            this.Nivel.HeaderText = "Nivel";
+            this.Nivel.Name = "Nivel";
+            this.Nivel.ReadOnly = true;
+            // 
+            // Tema
+            // 
+            this.Tema.DataPropertyName = "tema";
+            this.Tema.HeaderText = "Tema";
+            this.Tema.Name = "Tema";
+            this.Tema.ReadOnly = true;
+            // 
+            // Imagen
+            // 
+            this.Imagen.DataPropertyName = "imagen";
+            this.Imagen.HeaderText = "Imagen";
+            this.Imagen.Name = "Imagen";
+            this.Imagen.ReadOnly = true;
+            // 
             // ListaPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,14 +189,14 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Fondopantalla;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.comboBoxIdiomes);
+            this.Controls.Add(this.dataGridViewPreguntas);
             this.Controls.Add(this.comboBoxNivel);
             this.Controls.Add(this.labelNivel);
-            this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.labelIdioma);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.dataGridViewPreguntas);
             this.Controls.Add(this.labelLista);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ListaPreguntas";
@@ -170,13 +211,17 @@
         #endregion
 
         private System.Windows.Forms.Label labelLista;
-        private System.Windows.Forms.DataGridView dataGridViewPreguntas;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label labelIdioma;
-        private System.Windows.Forms.ComboBox comboBoxIdiomes;
         private System.Windows.Forms.Label labelNivel;
         private System.Windows.Forms.ComboBox comboBoxNivel;
+        private System.Windows.Forms.DataGridView dataGridViewPreguntas;
+        private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
     }
 }

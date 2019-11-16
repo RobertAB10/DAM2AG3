@@ -10,7 +10,7 @@ namespace AplicacionEscritorio
     {
         public string pregunta { get; set; }
         public string imagen { get; set; }
-        public string nivell { get; set; }
+        public string nivel { get; set; }
         public string tema { get; set; }
         public List<Respuesta> respuestas { get; set; }
 

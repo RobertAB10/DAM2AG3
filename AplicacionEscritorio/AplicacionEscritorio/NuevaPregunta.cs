@@ -142,7 +142,7 @@ namespace AplicacionEscritorio
                 Pregunta pregunta = new Pregunta();
                 pregunta.pregunta = textBoxPregunta.Text;
                 pregunta.imagen = pictureBoxPregunta.ImageLocation;
-                pregunta.nivell = comboBoxNivel.Text;
+                pregunta.nivel = comboBoxNivel.Text;
                 pregunta.tema = comboBoxTema.Text;
                 pregunta.respuestas = new List<Respuesta>();
 
