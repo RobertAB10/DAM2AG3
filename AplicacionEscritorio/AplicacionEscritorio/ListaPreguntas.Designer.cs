@@ -36,11 +36,11 @@
             this.labelNivel = new System.Windows.Forms.Label();
             this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.buttonEditar.TabIndex = 32;
             this.buttonEditar.Text = "EDITAR";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonEliminar
             // 
@@ -143,17 +144,6 @@
             this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPreguntas.TabIndex = 42;
             // 
-            // comboBoxIdiomes
-            // 
-            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 80);
-            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxIdiomes.TabIndex = 43;
-            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged_1);
-            // 
             // Personaje
             // 
             this.Personaje.DataPropertyName = "pregunta";
@@ -181,6 +171,17 @@
             this.Imagen.HeaderText = "Imagen";
             this.Imagen.Name = "Imagen";
             this.Imagen.ReadOnly = true;
+            // 
+            // comboBoxIdiomes
+            // 
+            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxIdiomes.FormattingEnabled = true;
+            this.comboBoxIdiomes.Location = new System.Drawing.Point(203, 80);
+            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
+            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxIdiomes.TabIndex = 43;
+            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged_1);
             // 
             // ListaPreguntas
             // 

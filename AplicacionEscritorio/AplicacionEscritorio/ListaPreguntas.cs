@@ -165,5 +165,19 @@ namespace AplicacionEscritorio
                 MessageBox.Show("Error, ninguna pregunta seleccionada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewPreguntas.SelectedRows.Count > 0)
+            {
+                Modificar_Pregunta ModificarPregunta = new Modificar_Pregunta();
+                ModificarPregunta.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Error, ninguna pregunta seleccionada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
