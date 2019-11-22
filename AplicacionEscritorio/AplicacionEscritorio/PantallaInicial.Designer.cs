@@ -135,6 +135,7 @@
             this.pictureBoxEspana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxEspana.TabIndex = 28;
             this.pictureBoxEspana.TabStop = false;
+            this.pictureBoxEspana.Click += new System.EventHandler(this.pictureBoxEspana_Click);
             // 
             // labelExportarPersonajes
             // 

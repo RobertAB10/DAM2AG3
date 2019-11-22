@@ -99,6 +99,7 @@
             this.buttonEditar.TabIndex = 42;
             this.buttonEditar.Text = "EDITAR";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // dataGridViewPersonajes
             // 

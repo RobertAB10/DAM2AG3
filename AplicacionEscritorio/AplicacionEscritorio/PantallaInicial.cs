@@ -57,5 +57,10 @@ namespace AplicacionEscritorio
             ListaPersonajes listaPersonajes = new ListaPersonajes();
             listaPersonajes.ShowDialog();
         }
+
+        private void pictureBoxEspana_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

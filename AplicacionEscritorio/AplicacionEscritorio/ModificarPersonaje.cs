@@ -13,27 +13,32 @@ using System.Windows.Forms;
 
 namespace AplicacionEscritorio
 {
-    public partial class ListaPersonajes : Form
+    public partial class ModificarPersonaje : Form
     {
 
         List<Personaje> personajes = new List<Personaje>();
 
-        public ListaPersonajes()
+        public ModificarPersonaje()
         {
             InitializeComponent();
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             MaximizeBox = false;
         }
 
-        private void ListaPersonajes_Load(object sender, EventArgs e)
+        private void pictureBoxPersonaje_Click(object sender, EventArgs e)
         {
-            comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxPersonaje.ImageLocation = openFileDialog.FileName;
+                pictureBoxPersonaje.BackgroundImageLayout = ImageLayout.Stretch;
+            }
         }
 
-        private void refrescar()
+        private void ModificarPersonaje_Load(object sender, EventArgs e)
         {
-            dataGridViewPersonajes.DataSource = null;
-            dataGridViewPersonajes.DataSource = personajes;
+            comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+
         }
 
         private void guardarFichero()
@@ -85,7 +90,9 @@ namespace AplicacionEscritorio
             }
             else
             {
-                MessageBox.Show("No existe fichero con personajes del idioma seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Fichero creado");
+                StreamWriter fichero = File.CreateText(ruta);
+                fichero.Close();
             }
 
         }
@@ -99,18 +106,24 @@ namespace AplicacionEscritorio
             switch (Idioma)
             {
                 case "Català":
-                    comprobarFichero(ruta);
-                    refrescar();
+                    pictureBoxIdioma.Image = Properties.Resources.Catalana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+
                     break;
 
                 case "Castellano":
-                    comprobarFichero(ruta);
-                    refrescar();
+                    pictureBoxIdioma.Image = Properties.Resources.Espana;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+
                     break;
 
                 case "English":
-                    comprobarFichero(ruta);
-                    refrescar();
+                    pictureBoxIdioma.Image = Properties.Resources.English;
+                    pictureBoxIdioma.Refresh();
+                    pictureBoxIdioma.Visible = true;
+
                     break;
             }
         }
@@ -120,37 +133,36 @@ namespace AplicacionEscritorio
             this.Close();
         }
 
-        private void buttonEliminar_Click(object sender, EventArgs e)
+        private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewPersonajes.SelectedRows.Count > 0)
+            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex < 0)
             {
-                foreach (DataGridViewRow personaje in dataGridViewPersonajes.SelectedRows)
-                {
-                    personajes.Remove((Personaje)personaje.DataBoundItem);
-                }
-                refrescar();
-                guardarFichero();
-                
+                MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                string ruta = rutaIdioma();
+                comprobarFichero(ruta);
+
+                Personaje personaje = new Personaje();
+                personaje.nombre = textBoxNombre.Text;
+                personaje.descripcion = textBoxDescripcion.Text;
+                personaje.imagen = pictureBoxPersonaje.ImageLocation;
+
+                personajes.Add(personaje);
+
+                //LLAMAMOS A LA FUNCION DE GUARDAR
+                guardarFichero();
+
+                //CERRAMOS EL FORM
+                this.Close();
             }
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
+        private void labelNuevaPregunta_Click(object sender, EventArgs e)
         {
-                 if (dataGridViewPersonajes.SelectedRows.Count > 0)
-            {
-                ModificarPersonaje modPersonaje = new ModificarPersonaje();
-                
-                modPersonaje.ShowDialog();
 
-            }
-            else
-            {
-                MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }
