@@ -170,6 +170,8 @@ namespace AplicacionEscritorio
         {
             if (dataGridViewPreguntas.SelectedRows.Count > 0)
             {
+                Pregunta pregunta = new Pregunta();
+
                 Modificar_Pregunta ModificarPregunta = new Modificar_Pregunta();
                 ModificarPregunta.ShowDialog();
 
