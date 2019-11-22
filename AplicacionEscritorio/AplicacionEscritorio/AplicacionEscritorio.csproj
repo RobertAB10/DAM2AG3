@@ -146,6 +146,12 @@
   <ItemGroup>
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
+    <Content Include="Resources\space.jpg" />
+    <None Include="Resources\space31.jpg" />
+    <None Include="Resources\space1.jpg" />
+    <Content Include="Resources\space2.jpg" />
+    <None Include="Resources\space21.jpg" />
+    <Content Include="Resources\space3.jpg" />
     <None Include="Resources\Fondopantalla1.png" />
     <None Include="Resources\insert-picture-icon.png" />
     <None Include="Resources\English.png" />
