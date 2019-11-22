@@ -345,6 +345,7 @@
             this.Controls.Add(this.labelPregunta);
             this.Controls.Add(this.labelNuevaModificarPregunta);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Modificar_Pregunta";
             this.Text = "Modificar Pregunta";
             this.Load += new System.EventHandler(this.Modificar_Pregunta_Load);

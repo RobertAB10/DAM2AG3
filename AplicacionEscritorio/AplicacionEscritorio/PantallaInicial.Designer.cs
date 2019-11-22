@@ -40,11 +40,13 @@
             this.labelExportarPersonajes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonNuevaPregunta
@@ -168,6 +170,17 @@
             this.pictureBoxInfo.TabStop = false;
             this.pictureBoxInfo.Click += new System.EventHandler(this.pictureBoxInfo_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Logo_mNACTEC_Space_OPS_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(251, 35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(279, 162);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
             // PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +188,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelExportarPersonajes);
@@ -187,6 +201,7 @@
             this.Controls.Add(this.buttonListaPreguntas);
             this.Controls.Add(this.buttonNuevaPregunta);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PantallaInicial";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.PantallaInicial_Load);
@@ -195,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +229,6 @@
         private System.Windows.Forms.Label labelExportarPersonajes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxInfo;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

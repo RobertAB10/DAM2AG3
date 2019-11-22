@@ -184,6 +184,7 @@
             this.Controls.Add(this.labelPregunta);
             this.Controls.Add(this.labelNuevaPregunta);
             this.Controls.Add(this.pictureBoxPersonaje);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NuevoPersonaje";
             this.Text = "Nuevo Personaje";
             this.Load += new System.EventHandler(this.NuevoPersonaje_Load);

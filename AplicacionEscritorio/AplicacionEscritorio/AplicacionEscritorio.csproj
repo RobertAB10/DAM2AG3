@@ -146,6 +146,7 @@
   <ItemGroup>
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
+    <None Include="Resources\Logo%28mNACTEC Space OPS%29.png" />
     <Content Include="Resources\space.jpg" />
     <None Include="Resources\space31.jpg" />
     <None Include="Resources\space1.jpg" />

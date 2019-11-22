@@ -141,6 +141,7 @@
             this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 111);
             this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
             this.dataGridViewPreguntas.ReadOnly = true;
+            this.dataGridViewPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPreguntas.TabIndex = 42;
             // 
@@ -200,6 +201,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelLista);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ListaPreguntas";
             this.Text = "ListaPreguntas";
             this.Load += new System.EventHandler(this.ListaPreguntas_Load);

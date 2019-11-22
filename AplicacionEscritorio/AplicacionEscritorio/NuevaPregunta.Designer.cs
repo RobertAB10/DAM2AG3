@@ -379,6 +379,7 @@
             this.Controls.Add(this.textBoxPregunta);
             this.Controls.Add(this.labelPregunta);
             this.Controls.Add(this.labelNuevaPregunta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NuevaPregunta";
             this.Text = "Nueva Pregunta";
             this.Load += new System.EventHandler(this.NuevaPregunta_Load);

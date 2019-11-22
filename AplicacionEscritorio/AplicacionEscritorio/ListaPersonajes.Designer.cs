@@ -112,6 +112,7 @@
             this.dataGridViewPersonajes.Location = new System.Drawing.Point(12, 117);
             this.dataGridViewPersonajes.Name = "dataGridViewPersonajes";
             this.dataGridViewPersonajes.ReadOnly = true;
+            this.dataGridViewPersonajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPersonajes.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
             // 
@@ -162,6 +163,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.dataGridViewPersonajes);
             this.Controls.Add(this.labelLista);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ListaPersonajes";
             this.Text = "Lista Personajes";
             this.Load += new System.EventHandler(this.ListaPersonajes_Load);

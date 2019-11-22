@@ -215,12 +215,12 @@ namespace AplicacionEscritorio
 
                 preguntas.Add(pregunta);
 
-            }
+                //LLAMAMOS A LA FUNCION DE GUARDAR
+                guardarFichero();
+                //CERRAMOS EL FORM
+                this.Close();
 
-            //LLAMAMOS A LA FUNCION DE GUARDAR
-            guardarFichero();
-            //CERRAMOS EL FORM
-            this.Close();
+            }
 
         }
 

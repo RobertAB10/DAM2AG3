@@ -134,6 +134,7 @@
             this.Controls.Add(this.pictureBoxIdioma);
             this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.labelNuevaPregunta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Informacion";
             this.Text = "Informacion";
             this.Load += new System.EventHandler(this.Informacion_Load);
