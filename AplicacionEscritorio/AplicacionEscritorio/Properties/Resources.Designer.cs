@@ -73,6 +73,16 @@ namespace AplicacionEscritorio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap English {
             get {
                 object obj = ResourceManager.GetObject("English", resourceCulture);
@@ -106,6 +116,16 @@ namespace AplicacionEscritorio.Properties {
         internal static System.Drawing.Bitmap insert_picture_icon {
             get {
                 object obj = ResourceManager.GetObject("insert-picture-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Blanco_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo(Blanco)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

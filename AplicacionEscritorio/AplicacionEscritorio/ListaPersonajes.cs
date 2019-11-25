@@ -140,11 +140,16 @@ namespace AplicacionEscritorio
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-                 if (dataGridViewPersonajes.SelectedRows.Count > 0)
+            if (dataGridViewPersonajes.SelectedRows.Count > 0)
             {
-                ModificarPersonaje modPersonaje = new ModificarPersonaje();
-                
-                modPersonaje.ShowDialog();
+                Personaje personaje = (Personaje)dataGridViewPersonajes.SelectedRows[0].DataBoundItem;
+
+                personajes.Remove(personaje);
+
+                ModificarPersonaje modificarPersonaje = new ModificarPersonaje(personajes, personaje);
+                modificarPersonaje.ShowDialog();
+                personajes.Add(personaje);
+                refrescar();
 
             }
             else

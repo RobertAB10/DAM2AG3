@@ -156,6 +156,8 @@
     <Content Include="Resources\castella.png" />
     <Content Include="Resources\catala.png" />
     <None Include="Resources\Logo%28mNACTEC Space OPS%29.png" />
+    <None Include="Resources\Logo%28Blanco%29.png" />
+    <None Include="Resources\close.png" />
     <Content Include="Resources\space.jpg" />
     <None Include="Resources\space31.jpg" />
     <None Include="Resources\space1.jpg" />
@@ -172,7 +174,7 @@
     <None Include="Resources\Universo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\JSON\" />
+    <Folder Include="Resources\JSON\imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

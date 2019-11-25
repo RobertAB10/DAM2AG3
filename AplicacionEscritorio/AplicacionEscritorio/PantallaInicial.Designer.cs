@@ -33,18 +33,8 @@
             this.buttonListaPreguntas = new System.Windows.Forms.Button();
             this.buttonNuevoPersonaje = new System.Windows.Forms.Button();
             this.buttonListaPersonajes = new System.Windows.Forms.Button();
-            this.labelExportarPreguntas = new System.Windows.Forms.Label();
-            this.pictureBoxCatala = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEnglish = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEspana = new System.Windows.Forms.PictureBox();
-            this.labelExportarPersonajes = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,72 +83,6 @@
             this.buttonListaPersonajes.UseVisualStyleBackColor = true;
             this.buttonListaPersonajes.Click += new System.EventHandler(this.buttonListaPersonajes_Click);
             // 
-            // labelExportarPreguntas
-            // 
-            this.labelExportarPreguntas.AutoSize = true;
-            this.labelExportarPreguntas.BackColor = System.Drawing.Color.Transparent;
-            this.labelExportarPreguntas.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExportarPreguntas.ForeColor = System.Drawing.Color.White;
-            this.labelExportarPreguntas.Location = new System.Drawing.Point(108, 408);
-            this.labelExportarPreguntas.Name = "labelExportarPreguntas";
-            this.labelExportarPreguntas.Size = new System.Drawing.Size(150, 21);
-            this.labelExportarPreguntas.TabIndex = 25;
-            this.labelExportarPreguntas.Text = "Exportar preguntas";
-            // 
-            // pictureBoxCatala
-            // 
-            this.pictureBoxCatala.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Catalana;
-            this.pictureBoxCatala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCatala.Location = new System.Drawing.Point(140, 447);
-            this.pictureBoxCatala.Name = "pictureBoxCatala";
-            this.pictureBoxCatala.Size = new System.Drawing.Size(95, 72);
-            this.pictureBoxCatala.TabIndex = 26;
-            this.pictureBoxCatala.TabStop = false;
-            // 
-            // pictureBoxEnglish
-            // 
-            this.pictureBoxEnglish.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.English;
-            this.pictureBoxEnglish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEnglish.Location = new System.Drawing.Point(251, 447);
-            this.pictureBoxEnglish.Name = "pictureBoxEnglish";
-            this.pictureBoxEnglish.Size = new System.Drawing.Size(95, 72);
-            this.pictureBoxEnglish.TabIndex = 27;
-            this.pictureBoxEnglish.TabStop = false;
-            // 
-            // pictureBoxEspana
-            // 
-            this.pictureBoxEspana.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Espana;
-            this.pictureBoxEspana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEspana.Location = new System.Drawing.Point(29, 447);
-            this.pictureBoxEspana.Name = "pictureBoxEspana";
-            this.pictureBoxEspana.Size = new System.Drawing.Size(95, 72);
-            this.pictureBoxEspana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxEspana.TabIndex = 28;
-            this.pictureBoxEspana.TabStop = false;
-            this.pictureBoxEspana.Click += new System.EventHandler(this.pictureBoxEspana_Click);
-            // 
-            // labelExportarPersonajes
-            // 
-            this.labelExportarPersonajes.AutoSize = true;
-            this.labelExportarPersonajes.BackColor = System.Drawing.Color.Transparent;
-            this.labelExportarPersonajes.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExportarPersonajes.ForeColor = System.Drawing.Color.White;
-            this.labelExportarPersonajes.Location = new System.Drawing.Point(471, 408);
-            this.labelExportarPersonajes.Name = "labelExportarPersonajes";
-            this.labelExportarPersonajes.Size = new System.Drawing.Size(155, 21);
-            this.labelExportarPersonajes.TabIndex = 29;
-            this.labelExportarPersonajes.Text = "Exportar personajes";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(500, 447);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 72);
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBoxInfo
             // 
             this.pictureBoxInfo.BackColor = System.Drawing.Color.Transparent;
@@ -174,11 +98,11 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Logo_mNACTEC_Space_OPS_;
+            this.pictureBox2.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Logo_Blanco_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(251, 35);
+            this.pictureBox2.Location = new System.Drawing.Point(246, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(279, 162);
+            this.pictureBox2.Size = new System.Drawing.Size(279, 145);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             // 
@@ -191,12 +115,6 @@
             this.ClientSize = new System.Drawing.Size(744, 531);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxInfo);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelExportarPersonajes);
-            this.Controls.Add(this.pictureBoxEspana);
-            this.Controls.Add(this.pictureBoxEnglish);
-            this.Controls.Add(this.pictureBoxCatala);
-            this.Controls.Add(this.labelExportarPreguntas);
             this.Controls.Add(this.buttonListaPersonajes);
             this.Controls.Add(this.buttonNuevoPersonaje);
             this.Controls.Add(this.buttonListaPreguntas);
@@ -206,14 +124,9 @@
             this.Name = "PantallaInicial";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.PantallaInicial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEspana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -223,12 +136,6 @@
         private System.Windows.Forms.Button buttonListaPreguntas;
         private System.Windows.Forms.Button buttonNuevoPersonaje;
         private System.Windows.Forms.Button buttonListaPersonajes;
-        private System.Windows.Forms.Label labelExportarPreguntas;
-        private System.Windows.Forms.PictureBox pictureBoxCatala;
-        private System.Windows.Forms.PictureBox pictureBoxEnglish;
-        private System.Windows.Forms.PictureBox pictureBoxEspana;
-        private System.Windows.Forms.Label labelExportarPersonajes;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

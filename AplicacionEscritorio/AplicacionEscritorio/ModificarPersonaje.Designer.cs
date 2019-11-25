@@ -33,14 +33,11 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.labelDescripcion = new System.Windows.Forms.Label();
-            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelImagen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPersonaje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxPersonaje
@@ -59,12 +56,11 @@
             this.labelModificarPersonaje.BackColor = System.Drawing.Color.Transparent;
             this.labelModificarPersonaje.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelModificarPersonaje.ForeColor = System.Drawing.Color.White;
-            this.labelModificarPersonaje.Location = new System.Drawing.Point(240, 9);
+            this.labelModificarPersonaje.Location = new System.Drawing.Point(253, 9);
             this.labelModificarPersonaje.Name = "labelModificarPersonaje";
             this.labelModificarPersonaje.Size = new System.Drawing.Size(316, 37);
             this.labelModificarPersonaje.TabIndex = 1;
             this.labelModificarPersonaje.Text = "MODIFICAR PERSONAJE";
-            this.labelModificarPersonaje.Click += new System.EventHandler(this.labelNuevaPregunta_Click);
             // 
             // labelNombre
             // 
@@ -99,26 +95,6 @@
             this.labelDescripcion.Size = new System.Drawing.Size(91, 21);
             this.labelDescripcion.TabIndex = 4;
             this.labelDescripcion.Text = "Descripcion";
-            // 
-            // pictureBoxIdioma
-            // 
-            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 14);
-            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
-            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
-            this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIdioma.TabIndex = 41;
-            this.pictureBoxIdioma.TabStop = false;
-            // 
-            // comboBoxIdiomes
-            // 
-            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 22);
-            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxIdiomes.TabIndex = 40;
-            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
             // 
             // textBoxDescripcion
             // 
@@ -178,8 +154,6 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.textBoxDescripcion);
-            this.Controls.Add(this.pictureBoxIdioma);
-            this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.labelNombre);
@@ -190,7 +164,6 @@
             this.Text = "Nuevo Personaje";
             this.Load += new System.EventHandler(this.ModificarPersonaje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPersonaje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +176,6 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label labelDescripcion;
-        private System.Windows.Forms.PictureBox pictureBoxIdioma;
-        private System.Windows.Forms.ComboBox comboBoxIdiomes;
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Button buttonCancelar;

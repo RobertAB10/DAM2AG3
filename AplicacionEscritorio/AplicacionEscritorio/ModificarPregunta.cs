@@ -112,7 +112,7 @@ namespace AplicacionEscritorio
 
         private void buttonConfirmar_Click_1(object sender, EventArgs e)
         {
-            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "")
+            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "" || textBoxRespuesta1.Text == "" || textBoxRespuesta2.Text == "" || textBoxRespuesta3.Text == "" || textBoxRespuesta4.Text == "")
             {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

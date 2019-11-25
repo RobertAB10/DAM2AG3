@@ -16,7 +16,7 @@ namespace AplicacionEscritorio
     public partial class NuevaPregunta : Form
     {
         List<Pregunta> preguntas = new List<Pregunta>();
-
+        String rutaDefinitiva;
         public NuevaPregunta()
         {
             InitializeComponent();
@@ -90,11 +90,30 @@ namespace AplicacionEscritorio
 
         private void pictureBoxPregunta_Click(object sender, EventArgs e)
         {
+            string rutaImagenes = @"..\..\Resources\JSON\imagenes\";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
-                pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
+                //pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
+                //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
+                if(pictureBoxPregunta.ImageLocation == null) {
+
+                    
+                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    File.Copy(openFileDialog.FileName, rutaImagenes);
+                    pictureBoxPregunta.ImageLocation = rutaImagenes;
+
+                   
+                    
+                } else {
+                    File.Delete(pictureBoxPregunta.ImageLocation);
+
+                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    File.Copy(openFileDialog.FileName, rutaImagenes);
+                    pictureBoxPregunta.ImageLocation = rutaImagenes;
+
+                }
+                // rutaDefinitiva = rutaImagenes.Substring(16);
             }
         }
 
@@ -130,7 +149,7 @@ namespace AplicacionEscritorio
         private void buttonConfirma_Click(object sender, EventArgs e)
         {
 
-            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "" || comboBoxIdiomes.SelectedIndex < 0)
+            if (textBoxPregunta.Text == "" || comboBoxNivel.Text == "" || comboBoxTema.Text == "" || comboBoxIdiomes.SelectedIndex < 0 || textBoxRespuesta1.Text == "" || textBoxRespuesta2.Text == "" || textBoxRespuesta3.Text == "" || textBoxRespuesta4.Text == "")
             {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

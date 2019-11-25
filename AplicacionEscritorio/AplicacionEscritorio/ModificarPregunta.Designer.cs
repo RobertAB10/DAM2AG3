@@ -86,6 +86,7 @@
             this.pictureBoxPregunta.Location = new System.Drawing.Point(26, 22);
             this.pictureBoxPregunta.Name = "pictureBoxPregunta";
             this.pictureBoxPregunta.Size = new System.Drawing.Size(167, 160);
+            this.pictureBoxPregunta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPregunta.TabIndex = 33;
             this.pictureBoxPregunta.TabStop = false;
             this.pictureBoxPregunta.Click += new System.EventHandler(this.pictureBoxPregunta_Click);

@@ -172,7 +172,6 @@ namespace AplicacionEscritorio
             {
                 Pregunta pregunta = (Pregunta)dataGridViewPreguntas.SelectedRows[0].DataBoundItem;
 
-
                 preguntas.Remove(pregunta);
 
                 Modificar_Pregunta modificar_Pregunta = new Modificar_Pregunta(preguntas, pregunta);
