@@ -29,11 +29,33 @@ namespace AplicacionEscritorio
 
         private void pictureBoxPersonaje_Click(object sender, EventArgs e)
         {
+            string rutaImagenes = @"..\..\Resources\JSON\imagenes\";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxPersonaje.ImageLocation = openFileDialog.FileName;
-                pictureBoxPersonaje.BackgroundImageLayout = ImageLayout.Stretch;
+                //pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
+                //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
+                if (pictureBoxPersonaje.ImageLocation == null)
+                {
+
+
+                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    File.Copy(openFileDialog.FileName, rutaImagenes);
+                    pictureBoxPersonaje.ImageLocation = rutaImagenes;
+
+
+
+                }
+                else
+                {
+                    File.Delete(pictureBoxPersonaje.ImageLocation);
+
+                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    File.Copy(openFileDialog.FileName, rutaImagenes);
+                    pictureBoxPersonaje.ImageLocation = rutaImagenes;
+
+                }
+                // rutaDefinitiva = rutaImagenes.Substring(16);
             }
         }
 
