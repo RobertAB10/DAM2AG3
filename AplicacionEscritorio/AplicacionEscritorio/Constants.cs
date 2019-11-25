@@ -10,5 +10,6 @@ namespace AplicacionEscritorio
     {
         public static String[] Idiomes { get; set; } = { "Català", "Castellano", "English" };
         public static String[] Nivells { get; set; } = { "Fàcil", "Difícil" };
+        public static String[] Temas { get; set; } = { "Espacio", "Disney", "Peliculas" };
     }
 }

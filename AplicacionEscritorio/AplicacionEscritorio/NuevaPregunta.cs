@@ -28,6 +28,7 @@ namespace AplicacionEscritorio
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
             comboBoxNivel.Items.AddRange(Constants.Nivells);
+            comboBoxTema.Items.AddRange(Constants.Temas);
         }
 
         private string rutaIdioma()

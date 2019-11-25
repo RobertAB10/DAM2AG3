@@ -163,3 +163,4 @@ C:\Users\victo\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\ob
 C:\Users\victo\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.exe
 C:\Users\victo\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.pdb
 C:\Users\victo\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.ModificarPersonaje.resources
+C:\Users\cep.CEPNET0\Source\Repos\DAM2AG3\AplicacionEscritorio\AplicacionEscritorio\obj\Debug\AplicacionEscritorio.ModificarPersonaje.resources

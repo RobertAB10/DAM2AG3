@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AplicacionEscritorio
 {
-    class Pregunta
+    public class Pregunta
     {
         public string pregunta { get; set; }
         public string imagen { get; set; }

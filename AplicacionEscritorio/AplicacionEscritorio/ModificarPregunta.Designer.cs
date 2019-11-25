@@ -51,11 +51,8 @@
             this.textBoxPregunta = new System.Windows.Forms.TextBox();
             this.labelPregunta = new System.Windows.Forms.Label();
             this.labelNuevaModificarPregunta = new System.Windows.Forms.Label();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
-            this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).BeginInit();
             this.groupBoxRespuestas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -116,6 +113,7 @@
             this.buttonConfirmar.TabIndex = 31;
             this.buttonConfirmar.Text = "CONFIRMAR";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click_1);
             // 
             // groupBoxRespuestas
             // 
@@ -296,33 +294,12 @@
             this.labelNuevaModificarPregunta.BackColor = System.Drawing.Color.Transparent;
             this.labelNuevaModificarPregunta.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaModificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(260, 67);
+            this.labelNuevaModificarPregunta.Location = new System.Drawing.Point(297, 66);
             this.labelNuevaModificarPregunta.Name = "labelNuevaModificarPregunta";
             this.labelNuevaModificarPregunta.Size = new System.Drawing.Size(308, 37);
             this.labelNuevaModificarPregunta.TabIndex = 25;
             this.labelNuevaModificarPregunta.Text = "MODIFICAR PREGUNTA";
             this.labelNuevaModificarPregunta.Click += new System.EventHandler(this.labelNuevaModificarPregunta_Click);
-            // 
-            // comboBoxIdiomes
-            // 
-            this.comboBoxIdiomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxIdiomes.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxIdiomes.FormattingEnabled = true;
-            this.comboBoxIdiomes.Location = new System.Drawing.Point(611, 20);
-            this.comboBoxIdiomes.Name = "comboBoxIdiomes";
-            this.comboBoxIdiomes.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxIdiomes.TabIndex = 36;
-            this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged);
-            // 
-            // pictureBoxIdioma
-            // 
-            this.pictureBoxIdioma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxIdioma.Location = new System.Drawing.Point(560, 12);
-            this.pictureBoxIdioma.Name = "pictureBoxIdioma";
-            this.pictureBoxIdioma.Size = new System.Drawing.Size(45, 37);
-            this.pictureBoxIdioma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIdioma.TabIndex = 37;
-            this.pictureBoxIdioma.TabStop = false;
             // 
             // Modificar_Pregunta
             // 
@@ -331,8 +308,6 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
-            this.Controls.Add(this.pictureBoxIdioma);
-            this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxTema);
             this.Controls.Add(this.pictureBoxPregunta);
@@ -352,7 +327,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).EndInit();
             this.groupBoxRespuestas.ResumeLayout(false);
             this.groupBoxRespuestas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +357,5 @@
         private System.Windows.Forms.TextBox textBoxPregunta;
         private System.Windows.Forms.Label labelPregunta;
         private System.Windows.Forms.Label labelNuevaModificarPregunta;
-        private System.Windows.Forms.ComboBox comboBoxIdiomes;
-        private System.Windows.Forms.PictureBox pictureBoxIdioma;
     }
 }
