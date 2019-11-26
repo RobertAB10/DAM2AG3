@@ -41,6 +41,7 @@
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +185,18 @@
             this.comboBoxIdiomes.TabIndex = 43;
             this.comboBoxIdiomes.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdiomes_SelectedIndexChanged_1);
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.BackColor = System.Drawing.Color.White;
+            this.buttonGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.Location = new System.Drawing.Point(321, 469);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(138, 37);
+            this.buttonGuardar.TabIndex = 44;
+            this.buttonGuardar.Text = "GUARDAR";
+            this.buttonGuardar.UseVisualStyleBackColor = false;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
             // ListaPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +204,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.dataGridViewPreguntas);
             this.Controls.Add(this.comboBoxNivel);
@@ -226,5 +240,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
+        private System.Windows.Forms.Button buttonGuardar;
     }
 }

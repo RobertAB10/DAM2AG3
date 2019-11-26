@@ -157,5 +157,10 @@ namespace AplicacionEscritorio
                 MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            guardarFichero();
+        }
     }
 }

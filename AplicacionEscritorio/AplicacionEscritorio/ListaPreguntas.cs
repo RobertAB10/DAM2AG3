@@ -185,5 +185,10 @@ namespace AplicacionEscritorio
                 MessageBox.Show("Error, ninguna pregunta seleccionada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            guardarFichero();
+        }
     }
 }

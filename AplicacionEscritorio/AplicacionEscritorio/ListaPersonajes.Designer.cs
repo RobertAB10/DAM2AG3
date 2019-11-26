@@ -38,6 +38,7 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelLista = new System.Windows.Forms.Label();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +151,18 @@
             this.labelLista.TabIndex = 40;
             this.labelLista.Text = "LISTA DE PERSONAJES";
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.BackColor = System.Drawing.Color.White;
+            this.buttonGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.Location = new System.Drawing.Point(321, 472);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(138, 37);
+            this.buttonGuardar.TabIndex = 47;
+            this.buttonGuardar.Text = "GUARDAR";
+            this.buttonGuardar.UseVisualStyleBackColor = false;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
             // ListaPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +170,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.labelIdioma);
             this.Controls.Add(this.buttonCancelar);
@@ -185,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
+        private System.Windows.Forms.Button buttonGuardar;
     }
 }
