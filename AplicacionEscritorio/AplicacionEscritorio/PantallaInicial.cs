@@ -16,7 +16,10 @@ namespace AplicacionEscritorio
 {
     public partial class PantallaInicial : Form
     {
-        
+        //Lista
+        List<Pregunta> preguntas = new List<Pregunta>();        
+
+
         public PantallaInicial()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace AplicacionEscritorio
         {
 
         }
+
 
         private void buttonNuevaPregunta_Click(object sender, EventArgs e)
         {
@@ -88,11 +92,35 @@ namespace AplicacionEscritorio
 
                 Directory.CreateDirectory(ruta + @"\mNACTEC\personajes");
                 Directory.CreateDirectory(ruta + @"\mNACTEC\preguntas");
-                Directory.CreateDirectory(ruta + @"\mNACTEC\imagenes");
 
                 // Serializa a JSON la lista de planetas 
                 // guarda en el directorio "contingut del joc\planetas\planetas"
-                File.WriteAllText(ruta + @"\mNACTEC\personajes\personajesCAT.json", @"..\..\Resources\JSON\preguntesCAT.json");
+
+
+                //Especifica la ruta de destino del fichero
+                string PreRutaCat = ruta + @"\mNACTEC\preguntas\preguntesCAT.json";
+                string PreRutaES = ruta + @"\mNACTEC\preguntas\preguntesES.json";
+                string PreRutaEN = ruta + @"\mNACTEC\preguntas\preguntesEN.json";
+                string PerRutaCat = ruta + @"\mNACTEC\personajes\personatgesCAT.json";
+                string PerRutaES = ruta + @"\mNACTEC\personajes\personatgesES.json";
+                string PerRutaEN = ruta + @"\mNACTEC\personajes\personatgesEN.json";
+
+
+                //Selecciona todo el texto de los ficheros JSON
+                string readtextPreCat = File.ReadAllText(@"..\..\Resources\JSON\preguntesCAT.json");
+                string readtextPreES = File.ReadAllText(@"..\..\Resources\JSON\preguntesES.json");
+                string readtextPreEN = File.ReadAllText(@"..\..\Resources\JSON\preguntesEN.json");
+                string readtextPerCat = File.ReadAllText(@"..\..\Resources\JSON\personatgesCAT.json");
+                string readtextPerES = File.ReadAllText(@"..\..\Resources\JSON\personatgesES.json");
+                string readtextPerEN = File.ReadAllText(@"..\..\Resources\JSON\personatgesEN.json");
+
+                //Copia los JSON a los nuevos ficheros.
+                File.WriteAllText(PreRutaCat, readtextPreCat);
+                File.WriteAllText(PreRutaES, readtextPreES);
+                File.WriteAllText(PreRutaEN, readtextPreEN);
+                File.WriteAllText(PerRutaCat, readtextPerCat);
+                File.WriteAllText(PerRutaES, readtextPerES);
+                File.WriteAllText(PerRutaEN, readtextPerEN);                
 
                 //Newtonsoft.Json.JsonConvert.SerializeObject(planetas));
 
@@ -104,7 +132,7 @@ namespace AplicacionEscritorio
 
 
                 // Copia las imagenes a la carpeta de imagenes y las renombra
-                File.Copy(@"..\..\Resources\JSON\preguntesCAT.json", ruta + @"\mNACTEC\preguntas\preguntesCAT.json");
+                //File.Copy(@"..\..\Resources\JSON\preguntesCAT.json", ruta + @"\mNACTEC\preguntas\preguntesCAT.json");
 
                 //System.IO.File.Copy(Personaje.rutaImagen1,
                 //        ruta + @"\Contingut del Joc\personatges\imatges\imagen1.png", true);
@@ -116,8 +144,8 @@ namespace AplicacionEscritorio
 
                 // Pregunta si esta seguro que- desea cerrar
                 var respuesta = MessageBox.Show(
-                    "Arxius generats correctament\nVols anar al directori? ",
-                    "Fet",
+                    "Archivos generados correctamente\n¿Quieres ir al directorio? ",
+                    "Hecho",
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
 
                 // Si es así, abre la carpeta que contiene los archivos
