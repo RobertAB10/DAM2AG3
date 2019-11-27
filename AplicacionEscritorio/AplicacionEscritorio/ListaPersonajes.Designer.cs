@@ -112,6 +112,7 @@
             this.Descripción,
             this.Imagen});
             this.dataGridViewPersonajes.Location = new System.Drawing.Point(12, 117);
+            this.dataGridViewPersonajes.MultiSelect = false;
             this.dataGridViewPersonajes.Name = "dataGridViewPersonajes";
             this.dataGridViewPersonajes.ReadOnly = true;
             this.dataGridViewPersonajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

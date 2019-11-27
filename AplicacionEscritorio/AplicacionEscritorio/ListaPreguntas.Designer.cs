@@ -33,8 +33,6 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelIdioma = new System.Windows.Forms.Label();
-            this.labelNivel = new System.Windows.Forms.Label();
-            this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
             this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,29 +104,6 @@
             this.labelIdioma.TabIndex = 36;
             this.labelIdioma.Text = "Idioma de las preguntas";
             // 
-            // labelNivel
-            // 
-            this.labelNivel.AutoSize = true;
-            this.labelNivel.BackColor = System.Drawing.Color.Transparent;
-            this.labelNivel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNivel.ForeColor = System.Drawing.Color.White;
-            this.labelNivel.Location = new System.Drawing.Point(389, 84);
-            this.labelNivel.Name = "labelNivel";
-            this.labelNivel.Size = new System.Drawing.Size(164, 21);
-            this.labelNivel.TabIndex = 38;
-            this.labelNivel.Text = "Nivel de las preguntas";
-            // 
-            // comboBoxNivel
-            // 
-            this.comboBoxNivel.BackColor = System.Drawing.Color.White;
-            this.comboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNivel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxNivel.FormattingEnabled = true;
-            this.comboBoxNivel.Location = new System.Drawing.Point(559, 80);
-            this.comboBoxNivel.Name = "comboBoxNivel";
-            this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxNivel.TabIndex = 39;
-            // 
             // dataGridViewPreguntas
             // 
             this.dataGridViewPreguntas.AllowUserToAddRows = false;
@@ -140,6 +115,7 @@
             this.Tema,
             this.Imagen});
             this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 111);
+            this.dataGridViewPreguntas.MultiSelect = false;
             this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
             this.dataGridViewPreguntas.ReadOnly = true;
             this.dataGridViewPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -207,8 +183,6 @@
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.dataGridViewPreguntas);
-            this.Controls.Add(this.comboBoxNivel);
-            this.Controls.Add(this.labelNivel);
             this.Controls.Add(this.labelIdioma);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEliminar);
@@ -232,8 +206,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label labelIdioma;
-        private System.Windows.Forms.Label labelNivel;
-        private System.Windows.Forms.ComboBox comboBoxNivel;
         private System.Windows.Forms.DataGridView dataGridViewPreguntas;
         private System.Windows.Forms.ComboBox comboBoxIdiomes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;

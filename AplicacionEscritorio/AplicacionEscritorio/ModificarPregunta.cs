@@ -35,7 +35,7 @@ namespace AplicacionEscritorio
             comboBoxNivel.Items.AddRange(Constants.Nivells);
             comboBoxTema.Items.AddRange(Constants.Temas);
             textBoxPregunta.Text = preguntaNueva.pregunta;
-            pictureBoxPregunta.ImageLocation = preguntaNueva.imagen;
+            //pictureBoxPregunta.ImageLocation = preguntaNueva.imagen;
             comboBoxTema.SelectedItem = preguntaNueva.tema;
             comboBoxNivel.SelectedItem = preguntaNueva.nivel;
             textBoxRespuesta1.Text = preguntaNueva.respuestas[0].respuesta.ToString();
@@ -146,7 +146,7 @@ namespace AplicacionEscritorio
 
 
                 preguntaNueva.pregunta = textBoxPregunta.Text;
-                preguntaNueva.imagen = pictureBoxPregunta.ImageLocation;
+                //preguntaNueva.imagen = pictureBoxPregunta.ImageLocation;
                 preguntaNueva.nivel = comboBoxNivel.Text;
                 preguntaNueva.tema = comboBoxTema.Text;
                 preguntaNueva.respuestas = new List<Respuesta>();

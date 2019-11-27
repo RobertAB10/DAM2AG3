@@ -35,6 +35,7 @@
             this.buttonListaPersonajes = new System.Windows.Forms.Button();
             this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.buttonExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +107,17 @@
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             // 
+            // buttonExportar
+            // 
+            this.buttonExportar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportar.Location = new System.Drawing.Point(226, 409);
+            this.buttonExportar.Name = "buttonExportar";
+            this.buttonExportar.Size = new System.Drawing.Size(299, 54);
+            this.buttonExportar.TabIndex = 33;
+            this.buttonExportar.Text = "EXPORTAR";
+            this.buttonExportar.UseVisualStyleBackColor = true;
+            this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
+            // 
             // PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +125,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.buttonExportar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxInfo);
             this.Controls.Add(this.buttonListaPersonajes);
@@ -138,5 +151,6 @@
         private System.Windows.Forms.Button buttonListaPersonajes;
         private System.Windows.Forms.PictureBox pictureBoxInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonExportar;
     }
 }

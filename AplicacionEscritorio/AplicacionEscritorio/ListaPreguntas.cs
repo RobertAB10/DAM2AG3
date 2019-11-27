@@ -28,7 +28,6 @@ namespace AplicacionEscritorio
         private void ListaPreguntas_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
-            comboBoxNivel.Items.AddRange(Constants.Nivells);
         }
 
         private void refrescar()

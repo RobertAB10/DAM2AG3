@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaPregunta));
             this.labelNuevaPregunta = new System.Windows.Forms.Label();
             this.labelPregunta = new System.Windows.Forms.Label();
             this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             this.labelNivel = new System.Windows.Forms.Label();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.pictureBoxPregunta = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxTema = new System.Windows.Forms.ComboBox();
             this.textBoxPregunta = new System.Windows.Forms.TextBox();
@@ -56,7 +54,6 @@
             this.buttonConfirma = new System.Windows.Forms.Button();
             this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
             this.pictureBoxIdioma = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).BeginInit();
             this.groupBoxRespuestas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +89,7 @@
             this.comboBoxNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNivel.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNivel.FormattingEnabled = true;
-            this.comboBoxNivel.Location = new System.Drawing.Point(538, 139);
+            this.comboBoxNivel.Location = new System.Drawing.Point(484, 161);
             this.comboBoxNivel.Name = "comboBoxNivel";
             this.comboBoxNivel.Size = new System.Drawing.Size(121, 25);
             this.comboBoxNivel.TabIndex = 17;
@@ -103,7 +100,7 @@
             this.labelNivel.BackColor = System.Drawing.Color.Transparent;
             this.labelNivel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNivel.ForeColor = System.Drawing.Color.White;
-            this.labelNivel.Location = new System.Drawing.Point(486, 142);
+            this.labelNivel.Location = new System.Drawing.Point(432, 164);
             this.labelNivel.Name = "labelNivel";
             this.labelNivel.Size = new System.Drawing.Size(46, 21);
             this.labelNivel.TabIndex = 18;
@@ -132,27 +129,13 @@
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxPregunta
-            // 
-            this.pictureBoxPregunta.BackColor = System.Drawing.Color.White;
-            this.pictureBoxPregunta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPregunta.BackgroundImage")));
-            this.pictureBoxPregunta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPregunta.InitialImage = null;
-            this.pictureBoxPregunta.Location = new System.Drawing.Point(23, 22);
-            this.pictureBoxPregunta.Name = "pictureBoxPregunta";
-            this.pictureBoxPregunta.Size = new System.Drawing.Size(167, 160);
-            this.pictureBoxPregunta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPregunta.TabIndex = 22;
-            this.pictureBoxPregunta.TabStop = false;
-            this.pictureBoxPregunta.Click += new System.EventHandler(this.pictureBoxPregunta_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(263, 142);
+            this.label5.Location = new System.Drawing.Point(55, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 21);
             this.label5.TabIndex = 24;
@@ -164,7 +147,7 @@
             this.comboBoxTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTema.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTema.FormattingEnabled = true;
-            this.comboBoxTema.Location = new System.Drawing.Point(315, 139);
+            this.comboBoxTema.Location = new System.Drawing.Point(107, 161);
             this.comboBoxTema.Name = "comboBoxTema";
             this.comboBoxTema.Size = new System.Drawing.Size(121, 25);
             this.comboBoxTema.TabIndex = 23;
@@ -366,7 +349,6 @@
             this.Controls.Add(this.buttonConfirma);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxTema);
-            this.Controls.Add(this.pictureBoxPregunta);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.groupBoxRespuestas);
@@ -379,7 +361,6 @@
             this.Name = "NuevaPregunta";
             this.Text = "Nueva Pregunta";
             this.Load += new System.EventHandler(this.NuevaPregunta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPregunta)).EndInit();
             this.groupBoxRespuestas.ResumeLayout(false);
             this.groupBoxRespuestas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdioma)).EndInit();
@@ -396,7 +377,6 @@
         private System.Windows.Forms.Label labelNivel;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.PictureBox pictureBoxPregunta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxTema;
         private System.Windows.Forms.TextBox textBoxPregunta;

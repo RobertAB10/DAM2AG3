@@ -16,7 +16,7 @@ namespace AplicacionEscritorio
     public partial class NuevaPregunta : Form
     {
         List<Pregunta> preguntas = new List<Pregunta>();
-        String rutaDefinitiva;
+        //String rutaDefinitiva;
         public NuevaPregunta()
         {
             InitializeComponent();
@@ -88,34 +88,33 @@ namespace AplicacionEscritorio
             MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        private void pictureBoxPregunta_Click(object sender, EventArgs e)
-        {
-            string rutaImagenes = @"..\..\Resources\JSON\imagenes\";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                //pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
-                //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
-                if(pictureBoxPregunta.ImageLocation == null) {
+        //private void pictureBoxPregunta_Click(object sender, EventArgs e) {
+        //    string rutaImagenes = @"..\..\Resources\JSON\imagenes\";
+        //    OpenFileDialog openFileDialog = new OpenFileDialog();
+        //    if (openFileDialog.ShowDialog() == DialogResult.OK)
+        //    {
+        //        //pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
+        //        //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
+        //        if(pictureBoxPregunta.ImageLocation == null) {
 
                     
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
-                    File.Copy(openFileDialog.FileName, rutaImagenes);
-                    pictureBoxPregunta.ImageLocation = rutaImagenes;
+        //            rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+        //            File.Copy(openFileDialog.FileName, rutaImagenes);
+        //            pictureBoxPregunta.ImageLocation = rutaImagenes;
 
                    
                     
-                } else {
-                    File.Delete(pictureBoxPregunta.ImageLocation);
+        //        } else {
+        //            File.Delete(pictureBoxPregunta.ImageLocation);
 
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
-                    File.Copy(openFileDialog.FileName, rutaImagenes);
-                    pictureBoxPregunta.ImageLocation = rutaImagenes;
+        //            rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+        //            File.Copy(openFileDialog.FileName, rutaImagenes);
+        //            pictureBoxPregunta.ImageLocation = rutaImagenes;
 
-                }
-                // rutaDefinitiva = rutaImagenes.Substring(16);
-            }
-        }
+        //        }
+        //        // rutaDefinitiva = rutaImagenes.Substring(16);
+        //    }
+        //}
 
         private void comboBoxIdiomes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -161,7 +160,7 @@ namespace AplicacionEscritorio
 
                 Pregunta pregunta = new Pregunta();
                 pregunta.pregunta = textBoxPregunta.Text;
-                pregunta.imagen = pictureBoxPregunta.ImageLocation;
+                //pregunta.imagen = pictureBoxPregunta.ImageLocation;
                 pregunta.nivel = comboBoxNivel.Text;
                 pregunta.tema = comboBoxTema.Text;
                 pregunta.respuestas = new List<Respuesta>();
