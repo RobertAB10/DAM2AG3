@@ -116,7 +116,7 @@
             this.dataGridViewPersonajes.Name = "dataGridViewPersonajes";
             this.dataGridViewPersonajes.ReadOnly = true;
             this.dataGridViewPersonajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPersonajes.Size = new System.Drawing.Size(720, 337);
+            this.dataGridViewPersonajes.Size = new System.Drawing.Size(447, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
             // 
             // Personaje

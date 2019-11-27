@@ -37,9 +37,18 @@ namespace AplicacionEscritorio
                 //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
                 if (pictureBoxPersonaje.ImageLocation == null)
                 {
+                    if (openFileDialog.FileName.EndsWith(".png"))
+                    {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    }
+                    else if(openFileDialog.FileName.EndsWith(".jpg")) {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".jpg";
+                    }
+                    else if (openFileDialog.FileName.EndsWith(".jpeg"))
+                    {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".jpeg";
+                    }
 
-
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
                     File.Copy(openFileDialog.FileName, rutaImagenes);
                     pictureBoxPersonaje.ImageLocation = rutaImagenes;
 
@@ -50,7 +59,18 @@ namespace AplicacionEscritorio
                 {
                     File.Delete(pictureBoxPersonaje.ImageLocation);
 
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    if (openFileDialog.FileName.EndsWith(".png"))
+                    {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
+                    }
+                    else if (openFileDialog.FileName.EndsWith(".jpg"))
+                    {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".jpg";
+                    }
+                    else if (openFileDialog.FileName.EndsWith(".jpeg"))
+                    {
+                        rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".jpeg";
+                    }
                     File.Copy(openFileDialog.FileName, rutaImagenes);
                     pictureBoxPersonaje.ImageLocation = rutaImagenes;
 

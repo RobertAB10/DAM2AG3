@@ -34,12 +34,11 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelIdioma = new System.Windows.Forms.Label();
             this.dataGridViewPreguntas = new System.Windows.Forms.DataGridView();
+            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxIdiomes = new System.Windows.Forms.ComboBox();
-            this.buttonGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreguntas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,8 +111,7 @@
             this.dataGridViewPreguntas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Personaje,
             this.Nivel,
-            this.Tema,
-            this.Imagen});
+            this.Tema});
             this.dataGridViewPreguntas.Location = new System.Drawing.Point(12, 111);
             this.dataGridViewPreguntas.MultiSelect = false;
             this.dataGridViewPreguntas.Name = "dataGridViewPreguntas";
@@ -122,34 +120,6 @@
             this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPreguntas.TabIndex = 42;
             this.dataGridViewPreguntas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPreguntas_CellContentClick);
-            // 
-            // Personaje
-            // 
-            this.Personaje.DataPropertyName = "pregunta";
-            this.Personaje.HeaderText = "Pregunta";
-            this.Personaje.Name = "Personaje";
-            this.Personaje.ReadOnly = true;
-            // 
-            // Nivel
-            // 
-            this.Nivel.DataPropertyName = "nivel";
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.ReadOnly = true;
-            // 
-            // Tema
-            // 
-            this.Tema.DataPropertyName = "tema";
-            this.Tema.HeaderText = "Tema";
-            this.Tema.Name = "Tema";
-            this.Tema.ReadOnly = true;
-            // 
-            // Imagen
-            // 
-            this.Imagen.DataPropertyName = "imagen";
-            this.Imagen.HeaderText = "Imagen";
-            this.Imagen.Name = "Imagen";
-            this.Imagen.ReadOnly = true;
             // 
             // comboBoxIdiomes
             // 
@@ -173,6 +143,27 @@
             this.buttonGuardar.Text = "GUARDAR";
             this.buttonGuardar.UseVisualStyleBackColor = false;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
+            // Personaje
+            // 
+            this.Personaje.DataPropertyName = "pregunta";
+            this.Personaje.HeaderText = "Pregunta";
+            this.Personaje.Name = "Personaje";
+            this.Personaje.ReadOnly = true;
+            // 
+            // Nivel
+            // 
+            this.Nivel.DataPropertyName = "nivel";
+            this.Nivel.HeaderText = "Nivel";
+            this.Nivel.Name = "Nivel";
+            this.Nivel.ReadOnly = true;
+            // 
+            // Tema
+            // 
+            this.Tema.DataPropertyName = "tema";
+            this.Tema.HeaderText = "Tema";
+            this.Tema.Name = "Tema";
+            this.Tema.ReadOnly = true;
             // 
             // ListaPreguntas
             // 
@@ -209,10 +200,9 @@
         private System.Windows.Forms.Label labelIdioma;
         private System.Windows.Forms.DataGridView dataGridViewPreguntas;
         private System.Windows.Forms.ComboBox comboBoxIdiomes;
+        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.Button buttonGuardar;
     }
 }
