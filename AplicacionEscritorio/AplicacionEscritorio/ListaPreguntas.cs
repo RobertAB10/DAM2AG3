@@ -189,5 +189,10 @@ namespace AplicacionEscritorio
         {
             guardarFichero();
         }
+
+        private void dataGridViewPreguntas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

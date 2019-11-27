@@ -121,6 +121,7 @@
             this.dataGridViewPreguntas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPreguntas.Size = new System.Drawing.Size(720, 337);
             this.dataGridViewPreguntas.TabIndex = 42;
+            this.dataGridViewPreguntas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPreguntas_CellContentClick);
             // 
             // Personaje
             // 

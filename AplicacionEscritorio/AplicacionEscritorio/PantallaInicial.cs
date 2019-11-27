@@ -120,7 +120,27 @@ namespace AplicacionEscritorio
                 File.WriteAllText(PreRutaEN, readtextPreEN);
                 File.WriteAllText(PerRutaCat, readtextPerCat);
                 File.WriteAllText(PerRutaES, readtextPerES);
-                File.WriteAllText(PerRutaEN, readtextPerEN);                
+                File.WriteAllText(PerRutaEN, readtextPerEN);
+
+                DirectoryInfo dir = new DirectoryInfo(@"..\..\Resources\JSON\imagenes\");
+                if (!dir.Exists)
+                {
+                    throw new DirectoryNotFoundException(
+                        "Source directory does not exist or could not be found:");
+
+                }
+                DirectoryInfo[] dirs = dir.GetDirectories();
+                Directory.CreateDirectory(ruta + @"\mNACTEC\imagenes");
+                FileInfo[] files = dir.GetFiles();
+                foreach (FileInfo file in files)
+                {
+                    string temppath = Path.Combine(ruta + @"\mNACTEC\imagenes", file.Name);
+                    file.CopyTo(temppath, false);
+                }
+
+
+
+
 
                 //Newtonsoft.Json.JsonConvert.SerializeObject(planetas));
 
