@@ -243,5 +243,9 @@ namespace AplicacionEscritorio
 
         }
 
+        private void comboBoxTema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

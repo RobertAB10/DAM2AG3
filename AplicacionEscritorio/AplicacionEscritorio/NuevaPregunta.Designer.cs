@@ -151,6 +151,7 @@
             this.comboBoxTema.Name = "comboBoxTema";
             this.comboBoxTema.Size = new System.Drawing.Size(121, 25);
             this.comboBoxTema.TabIndex = 23;
+            this.comboBoxTema.SelectedIndexChanged += new System.EventHandler(this.comboBoxTema_SelectedIndexChanged);
             // 
             // textBoxPregunta
             // 
