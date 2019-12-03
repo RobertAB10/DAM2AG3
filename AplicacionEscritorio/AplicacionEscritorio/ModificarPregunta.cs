@@ -94,41 +94,7 @@ namespace AplicacionEscritorio
             }
 
         }*/
-
-        private void pictureBoxPregunta_Click(object sender, EventArgs e)
-        {
-            string rutaImagenes = @"..\..\Resources\JSON\imagenes\";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                //pictureBoxPregunta.ImageLocation = openFileDialog.FileName;
-                //pictureBoxPregunta.BackgroundImageLayout = ImageLayout.Stretch;
-                if (pictureBoxPregunta.ImageLocation == null)
-                {
-
-
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
-                    File.Copy(openFileDialog.FileName, rutaImagenes);
-                    pictureBoxPregunta.ImageLocation = rutaImagenes;
-
-
-
-                }
-                else
-                {
-                    File.Delete(pictureBoxPregunta.ImageLocation);
-
-                    rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".png";
-                    File.Copy(openFileDialog.FileName, rutaImagenes);
-                    pictureBoxPregunta.ImageLocation = rutaImagenes;
-
-                }
-                // rutaDefinitiva = rutaImagenes.Substring(16);
-            }
-
-
-        }
-
+        
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
