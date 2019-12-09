@@ -74,7 +74,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.YellowGreen;
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(275, 79);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
@@ -111,7 +111,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.YellowGreen;
+            this.richTextBox2.BackColor = System.Drawing.Color.White;
             this.richTextBox2.Location = new System.Drawing.Point(275, 181);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;

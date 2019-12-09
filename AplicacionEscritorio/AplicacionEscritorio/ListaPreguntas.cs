@@ -34,6 +34,16 @@ namespace AplicacionEscritorio
         {
             dataGridViewPreguntas.DataSource = null;
             dataGridViewPreguntas.DataSource = preguntas;
+
+            if (preguntas.Count() == 0)
+            {
+                buttonEliminar.Enabled = false;
+            }
+            else
+            {
+                buttonEliminar.Enabled = true;
+            }
+
         }
 
         private void guardarFichero()
@@ -48,7 +58,7 @@ namespace AplicacionEscritorio
 
             jsonwriter.Close();
 
-            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Guardado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
 
@@ -149,19 +159,25 @@ namespace AplicacionEscritorio
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridViewPreguntas.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow pregunta in dataGridViewPreguntas.SelectedRows)
-                {
-                    preguntas.Remove((Pregunta)pregunta.DataBoundItem);
-                }
-                refrescar();
-                guardarFichero();
+            var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar la pregunta?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
-            }
-            else
+            if (respuesta == DialogResult.Yes)
             {
-                MessageBox.Show("Error, ninguna pregunta seleccionada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (dataGridViewPreguntas.SelectedRows.Count > 0)
+                {
+                    foreach (DataGridViewRow pregunta in dataGridViewPreguntas.SelectedRows)
+                    {
+                        preguntas.Remove((Pregunta)pregunta.DataBoundItem);
+                    }
+                    refrescar();
+                    guardarFichero();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error, ninguna pregunta seleccionada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

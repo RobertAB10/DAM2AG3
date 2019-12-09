@@ -28,12 +28,21 @@ namespace AplicacionEscritorio
         private void ListaPersonajes_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+           
         }
 
         private void refrescar()
         {
             dataGridViewPersonajes.DataSource = null;
             dataGridViewPersonajes.DataSource = personajes;
+            if (personajes.Count() == 0)
+            {
+                buttonEliminar.Enabled = false;
+            }
+            else
+            {
+                buttonEliminar.Enabled = true;
+            }
         }
 
         private void guardarFichero()
@@ -48,7 +57,7 @@ namespace AplicacionEscritorio
 
             jsonwriter.Close();
 
-            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Guardado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private string rutaIdioma()
@@ -122,19 +131,25 @@ namespace AplicacionEscritorio
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewPersonajes.SelectedRows.Count > 0)
+
+           var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar la pregunta?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+            if (respuesta == DialogResult.Yes)
             {
-                foreach (DataGridViewRow personaje in dataGridViewPersonajes.SelectedRows)
+                if (dataGridViewPersonajes.SelectedRows.Count > 0)
                 {
-                    personajes.Remove((Personaje)personaje.DataBoundItem);
+                    foreach (DataGridViewRow personaje in dataGridViewPersonajes.SelectedRows)
+                    {
+                        personajes.Remove((Personaje)personaje.DataBoundItem);
+                    }
+                    refrescar();
+                    guardarFichero();
+
                 }
-                refrescar();
-                guardarFichero();
-                
-            }
-            else
-            {
-                MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Error, ningún personaje seleccionado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -161,6 +176,21 @@ namespace AplicacionEscritorio
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             guardarFichero();
+        }
+
+        private void pictureBoxPreguntaSeleccionada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void dataGridViewPersonajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

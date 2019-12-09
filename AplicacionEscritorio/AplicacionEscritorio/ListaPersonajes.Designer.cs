@@ -39,7 +39,9 @@
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelLista = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
+            this.pictureBoxPreguntaSeleccionada = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreguntaSeleccionada)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxIdiomes
@@ -106,6 +108,7 @@
             // 
             this.dataGridViewPersonajes.AllowUserToAddRows = false;
             this.dataGridViewPersonajes.AllowUserToDeleteRows = false;
+            this.dataGridViewPersonajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPersonajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPersonajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Personaje,
@@ -118,6 +121,7 @@
             this.dataGridViewPersonajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPersonajes.Size = new System.Drawing.Size(447, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
+            this.dataGridViewPersonajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonajes_CellContentClick);
             // 
             // Personaje
             // 
@@ -164,6 +168,15 @@
             this.buttonGuardar.UseVisualStyleBackColor = false;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
+            // pictureBoxPreguntaSeleccionada
+            // 
+            this.pictureBoxPreguntaSeleccionada.Location = new System.Drawing.Point(465, 117);
+            this.pictureBoxPreguntaSeleccionada.Name = "pictureBoxPreguntaSeleccionada";
+            this.pictureBoxPreguntaSeleccionada.Size = new System.Drawing.Size(267, 337);
+            this.pictureBoxPreguntaSeleccionada.TabIndex = 48;
+            this.pictureBoxPreguntaSeleccionada.TabStop = false;
+            this.pictureBoxPreguntaSeleccionada.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // ListaPersonajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +184,7 @@
             this.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.space;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(744, 531);
+            this.Controls.Add(this.pictureBoxPreguntaSeleccionada);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.comboBoxIdiomes);
             this.Controls.Add(this.labelIdioma);
@@ -184,6 +198,7 @@
             this.Text = "Lista Personajes";
             this.Load += new System.EventHandler(this.ListaPersonajes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreguntaSeleccionada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +216,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
         private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.PictureBox pictureBoxPreguntaSeleccionada;
     }
 }

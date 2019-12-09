@@ -157,6 +157,7 @@
     <None Include="Resources\Logo%28mNACTEC Space OPS%29.png" />
     <None Include="Resources\Logo%28Blanco%29.png" />
     <None Include="Resources\close.png" />
+    <Content Include="Resources\Espana.png" />
     <Content Include="Resources\space.jpg" />
     <None Include="Resources\space31.jpg" />
     <None Include="Resources\space1.jpg" />
@@ -166,7 +167,6 @@
     <None Include="Resources\Fondopantalla1.png" />
     <None Include="Resources\insert-picture-icon.png" />
     <None Include="Resources\English.png" />
-    <None Include="Resources\Espana.png" />
     <None Include="Resources\Catalana.png" />
     <Content Include="Resources\Fondopantalla.png" />
     <None Include="Resources\luna.png" />
