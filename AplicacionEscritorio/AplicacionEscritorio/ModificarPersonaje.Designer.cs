@@ -46,6 +46,7 @@
             this.pictureBoxPersonaje.Location = new System.Drawing.Point(12, 121);
             this.pictureBoxPersonaje.Name = "pictureBoxPersonaje";
             this.pictureBoxPersonaje.Size = new System.Drawing.Size(329, 350);
+            this.pictureBoxPersonaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPersonaje.TabIndex = 0;
             this.pictureBoxPersonaje.TabStop = false;
             this.pictureBoxPersonaje.Click += new System.EventHandler(this.pictureBoxPersonaje_Click);

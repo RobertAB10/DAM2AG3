@@ -143,7 +143,7 @@ namespace AplicacionEscritorio
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
 
-           var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar la pregunta?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+           var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar el personaje?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
             if (respuesta == DialogResult.Yes)
             {
