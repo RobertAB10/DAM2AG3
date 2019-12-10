@@ -28,21 +28,32 @@ namespace AplicacionEscritorio
         private void ListaPersonajes_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+            BloqueoBotones();
            
+        }
+
+        private void BloqueoBotones()
+        {
+            if (personajes.Count() == 0)
+            {
+                buttonEliminar.Enabled = false;
+                buttonEditar.Enabled = false;
+                buttonGuardar.Enabled = false;
+            }
+            else
+            {
+                buttonEliminar.Enabled = true;
+                buttonEditar.Enabled = true;
+                buttonGuardar.Enabled = true;
+            }
         }
 
         private void refrescar()
         {
             dataGridViewPersonajes.DataSource = null;
             dataGridViewPersonajes.DataSource = personajes;
-            if (personajes.Count() == 0)
-            {
-                buttonEliminar.Enabled = false;
-            }
-            else
-            {
-                buttonEliminar.Enabled = true;
-            }
+            BloqueoBotones();
+           
         }
 
         private void guardarFichero()

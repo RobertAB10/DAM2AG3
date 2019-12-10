@@ -23,26 +23,37 @@ namespace AplicacionEscritorio
             InitializeComponent();
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             MaximizeBox = false;
+
         }
 
         private void ListaPreguntas_Load(object sender, EventArgs e)
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
+            BloqueoBotones();
+        }
+
+        private void BloqueoBotones()
+        {
+            if (preguntas.Count() == 0)
+            {
+                buttonEliminar.Enabled = false;
+                buttonEditar.Enabled = false;
+                buttonGuardar.Enabled = false;
+            }
+            else
+            {
+                buttonEliminar.Enabled = true;
+                buttonEditar.Enabled = true;
+                buttonGuardar.Enabled = true;
+            }
         }
 
         private void refrescar()
         {
             dataGridViewPreguntas.DataSource = null;
             dataGridViewPreguntas.DataSource = preguntas;
-
-            if (preguntas.Count() == 0)
-            {
-                buttonEliminar.Enabled = false;
-            }
-            else
-            {
-                buttonEliminar.Enabled = true;
-            }
+            BloqueoBotones();
+           
 
         }
 
