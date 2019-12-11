@@ -48,8 +48,8 @@ namespace AplicacionEscritorio
                     {
                         rutaImagenes += "imagen" + DateTime.Now.Ticks.ToString() + ".jpeg";
                     }
-                          
 
+                    pictureBoxPersonaje.BackgroundImageLayout = ImageLayout.Stretch;
                     File.Copy(openFileDialog.FileName, rutaImagenes);
                     pictureBoxPersonaje.ImageLocation = rutaImagenes;
 
