@@ -50,6 +50,7 @@ namespace AplicacionEscritorio
                     }
 
                     pictureBoxPersonaje.BackgroundImageLayout = ImageLayout.Stretch;
+
                     File.Copy(openFileDialog.FileName, rutaImagenes);
                     pictureBoxPersonaje.ImageLocation = rutaImagenes;
 

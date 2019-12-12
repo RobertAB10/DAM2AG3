@@ -34,12 +34,12 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.dataGridViewPersonajes = new System.Windows.Forms.DataGridView();
-            this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelLista = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.pictureBoxPreguntaSeleccionada = new System.Windows.Forms.PictureBox();
+            this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreguntaSeleccionada)).BeginInit();
             this.SuspendLayout();
@@ -122,27 +122,7 @@
             this.dataGridViewPersonajes.Size = new System.Drawing.Size(447, 337);
             this.dataGridViewPersonajes.TabIndex = 41;
             this.dataGridViewPersonajes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonajes_CellContentClick);
-            // 
-            // Personaje
-            // 
-            this.Personaje.DataPropertyName = "nombre";
-            this.Personaje.HeaderText = "Personaje";
-            this.Personaje.Name = "Personaje";
-            this.Personaje.ReadOnly = true;
-            // 
-            // Descripción
-            // 
-            this.Descripción.DataPropertyName = "descripcion";
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            // 
-            // Imagen
-            // 
-            this.Imagen.DataPropertyName = "imagen";
-            this.Imagen.HeaderText = "Imagen";
-            this.Imagen.Name = "Imagen";
-            this.Imagen.ReadOnly = true;
+            this.dataGridViewPersonajes.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPersonajes_RowHeaderMouseClick);
             // 
             // labelLista
             // 
@@ -173,9 +153,32 @@
             this.pictureBoxPreguntaSeleccionada.Location = new System.Drawing.Point(465, 117);
             this.pictureBoxPreguntaSeleccionada.Name = "pictureBoxPreguntaSeleccionada";
             this.pictureBoxPreguntaSeleccionada.Size = new System.Drawing.Size(267, 337);
+            this.pictureBoxPreguntaSeleccionada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPreguntaSeleccionada.TabIndex = 48;
             this.pictureBoxPreguntaSeleccionada.TabStop = false;
             this.pictureBoxPreguntaSeleccionada.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Personaje
+            // 
+            this.Personaje.DataPropertyName = "nombre";
+            this.Personaje.HeaderText = "Personaje";
+            this.Personaje.Name = "Personaje";
+            this.Personaje.ReadOnly = true;
+            // 
+            // Descripción
+            // 
+            this.Descripción.DataPropertyName = "descripcion";
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            // 
+            // Imagen
+            // 
+            this.Imagen.DataPropertyName = "imagen";
+            this.Imagen.HeaderText = "Imagen";
+            this.Imagen.Name = "Imagen";
+            this.Imagen.ReadOnly = true;
+            this.Imagen.Visible = false;
             // 
             // ListaPersonajes
             // 
@@ -212,10 +215,10 @@
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.DataGridView dataGridViewPersonajes;
         private System.Windows.Forms.Label labelLista;
+        private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.PictureBox pictureBoxPreguntaSeleccionada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.Button buttonGuardar;
-        private System.Windows.Forms.PictureBox pictureBoxPreguntaSeleccionada;
     }
 }

@@ -112,7 +112,7 @@ namespace AplicacionEscritorio
                
                 personajeNuevo.nombre = textBoxNombre.Text;
                 personajeNuevo.descripcion = textBoxDescripcion.Text;
-                personajeNuevo.imagen = pictureBoxPersonaje.ImageLocation;
+                personajeNuevo.imagen = pictureBoxPersonaje.ImageLocation;                
                 personajes.Add(personajeNuevo);
                 //CERRAMOS EL FORM
                 this.Close();

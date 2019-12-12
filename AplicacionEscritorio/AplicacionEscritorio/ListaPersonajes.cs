@@ -29,7 +29,7 @@ namespace AplicacionEscritorio
         {
             comboBoxIdiomes.Items.AddRange(Constants.Idiomes);
             BloqueoBotones();
-           
+
         }
 
         private void BloqueoBotones()
@@ -52,8 +52,10 @@ namespace AplicacionEscritorio
         {
             dataGridViewPersonajes.DataSource = null;
             dataGridViewPersonajes.DataSource = personajes;
+            pictureBoxPreguntaSeleccionada.ImageLocation = null;
+
             BloqueoBotones();
-           
+
         }
 
         private void guardarFichero()
@@ -133,6 +135,8 @@ namespace AplicacionEscritorio
                     refrescar();
                     break;
             }
+
+            dataGridViewPersonajes.AutoGenerateColumns = false;
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -143,7 +147,7 @@ namespace AplicacionEscritorio
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
 
-           var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar el personaje?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            var respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar el personaje?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
             if (respuesta == DialogResult.Yes)
             {
@@ -196,12 +200,21 @@ namespace AplicacionEscritorio
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void dataGridViewPersonajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
+
+        }
+
+        private void dataGridViewPersonajes_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            pictureBoxPreguntaSeleccionada.ImageLocation = dataGridViewPersonajes.CurrentRow.Cells[1].Value.ToString();
         }
     }
+    
 }
