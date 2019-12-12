@@ -101,9 +101,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::AplicacionEscritorio.Properties.Resources.Logo_Blanco_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(246, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(181, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(279, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(390, 195);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             // 

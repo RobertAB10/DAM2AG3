@@ -179,7 +179,7 @@ namespace AplicacionEscritorio
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex < 0)
+            if (textBoxNombre.Text == "" || textBoxDescripcion.Text == "" || comboBoxIdiomes.SelectedIndex < 0 || pictureBoxPersonaje.Image == null)
             {
                 MessageBox.Show("Faltan campos por completar", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
