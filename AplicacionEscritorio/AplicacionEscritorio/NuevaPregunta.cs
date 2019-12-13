@@ -85,7 +85,7 @@ namespace AplicacionEscritorio
 
             jsonwriter.Close();
 
-            MessageBox.Show("Guardado correcamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Guardado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         //private void pictureBoxPregunta_Click(object sender, EventArgs e) {
